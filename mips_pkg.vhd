@@ -18,9 +18,16 @@ package mips_pkg is
 	-- Instrucoes do MIPs
 	constant iRTYPE		: std_logic_vector(5 downto 0) := "000000";
 	constant iLW			: std_logic_vector(5 downto 0) := "100011";
+	constant iLB			: std_logic_vector(5 downto 0) := "100000";
+	constant iLBU			: std_logic_vector(5 downto 0) := "100100";
+	constant iLH			: std_logic_vector(5 downto 0) := "100001";
+	constant iLHU			: std_logic_vector(5 downto 0) := "100101";
 	constant iSW			: std_logic_vector(5 downto 0) := "101011";
+	constant iSB			: std_logic_vector(5 downto 0) := "101000";
+	constant iSH			: std_logic_vector(5 downto 0) := "101001";
 	constant iADDI			: std_logic_vector(5 downto 0) := "001000";
 	constant iORI			: std_logic_vector(5 downto 0) := "001101";
+	constant iANDI			: std_logic_vector(5 downto 0) := "001100";
 	constant iJ				: std_logic_vector(5 downto 0) := "000010";
 	constant iBEQ			: std_logic_vector(5 downto 0) := "000100";
 	constant iBNE			: std_logic_vector(5 downto 0) := "000101";

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Multiciclo
-Sun Dec 09 15:12:22 2018
+Sun Dec 09 16:52:19 2018
 Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -2514,7 +2514,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Sun Dec 09 15:12:20 2018
+    Info: Processing started: Sun Dec 09 16:52:17 2018
 Info: Command: quartus_sta Multiciclo -c Multiciclo
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
@@ -2570,7 +2570,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4694 megabytes
-    Info: Processing ended: Sun Dec 09 15:12:22 2018
+    Info: Processing ended: Sun Dec 09 16:52:19 2018
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

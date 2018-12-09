@@ -6,7 +6,7 @@ Z0 dC:\Users\rodri\Desktop\mips-multiciclo\simulation\modelsim
 Ealu_ctr
 Z1 w1544294934
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z3 DPx4 work 8 mips_pkg 0 22 XzF7mB9aJFSJFYdKTgB]Y2
+Z3 DPx4 work 8 mips_pkg 0 22 G3P5LlE]G8UN2GdESUSl=3
 Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z6 dC:\Users\rodri\Desktop\mips-multiciclo\simulation\modelsim
@@ -17,7 +17,7 @@ L8
 VYCB6mXA:>[Md82iQ_QYS02
 Z9 OV;C;10.1b;51
 31
-Z10 !s108 1544375568.574000
+Z10 !s108 1544381556.777000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/alu_ctr.vhd|
 Z12 !s107 C:/Users/rodri/Desktop/mips-multiciclo/alu_ctr.vhd|
 Z13 o-93 -work work -O0
@@ -58,7 +58,7 @@ L10
 V@8`bB?R9g4L5C@Ug6HJ?73
 R9
 31
-Z19 !s108 1544375568.155000
+Z19 !s108 1544381556.368000
 Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/breg.vhd|
 Z21 !s107 C:/Users/rodri/Desktop/mips-multiciclo/breg.vhd|
 R13
@@ -99,7 +99,7 @@ L6
 V1_30]<W[89M5bF?h[]^<30
 R9
 31
-Z24 !s108 1544375567.902000
+Z24 !s108 1544381556.041000
 Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/extsgn.vhd|
 Z26 !s107 C:/Users/rodri/Desktop/mips-multiciclo/extsgn.vhd|
 R13
@@ -138,7 +138,7 @@ L5
 VEUfU>9]WHj6WG>2Ie^HY:3
 R9
 31
-Z29 !s108 1544375567.567000
+Z29 !s108 1544381555.652000
 Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_control.vhd|
 Z31 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_control.vhd|
 R13
@@ -178,7 +178,7 @@ L12
 VO@SdERni9?Y^U]HOf7dC:1
 R9
 31
-Z35 !s108 1544375567.256000
+Z35 !s108 1544381555.178000
 Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_mem.vhd|
 Z37 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_mem.vhd|
 R13
@@ -208,21 +208,21 @@ Pmips_pkg
 R2
 R4
 R5
-R1
+Z38 w1544380975
 R6
-Z38 8C:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd
-Z39 FC:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd
+Z39 8C:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd
+Z40 FC:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd
 l0
 L6
-VXzF7mB9aJFSJFYdKTgB]Y2
+VG3P5LlE]G8UN2GdESUSl=3
 R9
 31
-Z40 !s108 1544375565.334000
-Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd|
-Z42 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd|
+Z41 !s108 1544381552.714000
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd|
+Z43 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd|
 R13
 R14
-!s100 Uo0dZgLdjG3LlV=e5kK9H0
+!s100 n8`U?HI46HeVdDFeki:B<1
 !i10b 1
 Bbody
 R3
@@ -230,27 +230,27 @@ R2
 R4
 R5
 l0
-L276
+L283
 VjHjkP2zVYhJ7i:?`Bf?Q80
 R9
 31
-R40
 R41
 R42
+R43
 R13
 R14
 nbody
-!s100 YNAhe`>inG_LnQLYXi_Q=0
+!s100 2IF@O=<1XWKbJ_fE[>2:m2
 !i10b 1
 Emips_tb
-Z43 w1544374062
+Z44 w1544374062
 R2
 R3
 R4
 R5
 R6
-Z44 8C:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd
-Z45 FC:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd
+Z45 8C:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd
+Z46 FC:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd
 l0
 L8
 VzX4oXTnMz67kZ_DPo@k[Q2
@@ -258,9 +258,9 @@ VzX4oXTnMz67kZ_DPo@k[Q2
 R9
 31
 !i10b 1
-Z46 !s108 1544375568.941000
-Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd|
-Z48 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd|
+Z47 !s108 1544381557.076000
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd|
+Z49 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd|
 R13
 R14
 Atb
@@ -276,28 +276,28 @@ V8k=RXXzf:@3l=?fe`ZV230
 R9
 31
 !i10b 1
-R46
 R47
 R48
+R49
 R13
 R14
 Emulticiclo
-Z49 w1544371753
+Z50 w1544371753
 R2
 R3
 R4
 R5
 R6
-Z50 8C:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd
-Z51 FC:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd
+Z51 8C:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd
+Z52 FC:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd
 l0
 L8
 V3b_IYIL:OQB7<[]Ke<FV;1
 R9
 31
-Z52 !s108 1544375566.899000
-Z53 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd|
-Z54 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd|
+Z53 !s108 1544381554.768000
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd|
+Z55 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd|
 R13
 R14
 !s100 @HW6gbG^z9F<]>]`Z=]gn0
@@ -313,9 +313,9 @@ L19
 VB8JUY8m:kkC28Y11LIUoE0
 R9
 31
-R52
 R53
 R54
+R55
 R13
 R14
 !s100 >`]=3<]97m0DzVYf7Y8LU1
@@ -325,20 +325,20 @@ R1
 R2
 R3
 R15
-Z55 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
+Z56 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
 R4
 R5
 R6
-Z56 8C:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd
-Z57 FC:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd
+Z57 8C:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd
+Z58 FC:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd
 l0
 L6
 Vg0Io]c`bdUN4[=;LL9M6=2
 R9
 31
-Z58 !s108 1544375566.589000
-Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd|
-Z60 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd|
+Z59 !s108 1544381554.317000
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd|
+Z61 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd|
 R13
 R14
 !s100 9ce3kMhhE>?Ya2@7W_38>2
@@ -347,7 +347,7 @@ Artl
 R2
 R3
 R15
-R55
+R56
 R4
 R5
 DEx4 work 5 mux_2 0 22 g0Io]c`bdUN4[=;LL9M6=2
@@ -356,9 +356,9 @@ L15
 VeShBG@FzQc0:GjFD]2Z001
 R9
 31
-R58
 R59
 R60
+R61
 R13
 R14
 !s100 E?5jS]Sd5gQzi1UJMfSXE2
@@ -368,20 +368,20 @@ R1
 R2
 R3
 R15
-R55
+R56
 R4
 R5
 R6
-Z61 8C:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd
-Z62 FC:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd
+Z62 8C:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd
+Z63 FC:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd
 l0
 L6
 VNA_IWTgOn=MT0>d7<2TSR0
 R9
 31
-Z63 !s108 1544375566.289000
-Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd|
-Z65 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd|
+Z64 !s108 1544381554.055000
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd|
+Z66 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd|
 R13
 R14
 !s100 ^VM<[HMnZeP=0iQkE`<XE3
@@ -390,7 +390,7 @@ Artl
 R2
 R3
 R15
-R55
+R56
 R4
 R5
 DEx4 work 5 mux_3 0 22 NA_IWTgOn=MT0>d7<2TSR0
@@ -399,9 +399,9 @@ L16
 VmO7Tg1be?oD<h`[VW=VbB2
 R9
 31
-R63
 R64
 R65
+R66
 R13
 R14
 !s100 dH=bL6`[B9UP2l47LRzR?2
@@ -411,20 +411,20 @@ R1
 R2
 R3
 R15
-R55
+R56
 R4
 R5
 R6
-Z66 8C:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd
-Z67 FC:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd
+Z67 8C:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd
+Z68 FC:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd
 l0
 L6
 VU^TFaTngo2GPVVYQJhzT12
 R9
 31
-Z68 !s108 1544375566.038000
-Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd|
-Z70 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd|
+Z69 !s108 1544381553.678000
+Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd|
+Z71 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd|
 R13
 R14
 !s100 2KjE@fFJfU;hkjFm4_@^02
@@ -433,7 +433,7 @@ Artl
 R2
 R3
 R15
-R55
+R56
 R4
 R5
 DEx4 work 5 mux_4 0 22 U^TFaTngo2GPVVYQJhzT12
@@ -442,9 +442,9 @@ L16
 VS002UVOF6>F=DLE=l;@Y72
 R9
 31
-R68
 R69
 R70
+R71
 R13
 R14
 !s100 8SPiA@VYl8lQOMS1W[Oka1
@@ -454,16 +454,16 @@ R1
 R4
 R5
 R6
-Z71 8C:/Users/rodri/Desktop/mips-multiciclo/reg.vhd
-Z72 FC:/Users/rodri/Desktop/mips-multiciclo/reg.vhd
+Z72 8C:/Users/rodri/Desktop/mips-multiciclo/reg.vhd
+Z73 FC:/Users/rodri/Desktop/mips-multiciclo/reg.vhd
 l0
 L7
 V=M[ABcRJOEGR;Bk2YdQ=C3
 R9
 31
-Z73 !s108 1544375564.940000
-Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/reg.vhd|
-Z75 !s107 C:/Users/rodri/Desktop/mips-multiciclo/reg.vhd|
+Z74 !s108 1544381552.449000
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/reg.vhd|
+Z76 !s107 C:/Users/rodri/Desktop/mips-multiciclo/reg.vhd|
 R13
 R14
 !s100 VzGUjc>85]Tl_V^;DRB]42
@@ -477,9 +477,9 @@ L21
 VGI8ZZ_bzE>hF;BINzY?G>1
 R9
 31
-R73
 R74
 R75
+R76
 R13
 R14
 !s100 m3b>>X::ZgKUNcA2PKKXY1
@@ -489,16 +489,16 @@ R1
 R4
 R5
 R6
-Z76 8C:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd
-Z77 FC:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd
+Z77 8C:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd
+Z78 FC:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd
 l0
 L7
 V<YlF2G;hj=P5B33heZJQR3
 R9
 31
-Z78 !s108 1544375564.661000
-Z79 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd|
-Z80 !s107 C:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd|
+Z79 !s108 1544381552.002000
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd|
+Z81 !s107 C:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd|
 R13
 R14
 !s100 4C6SegQn=jTK3[3EB`?oA1
@@ -512,9 +512,9 @@ L19
 V><K:O9C;i7<RGfcUOdDdW1
 R9
 31
-R78
 R79
 R80
+R81
 R13
 R14
 !s100 dU0zZFiXlE=gIaOd@PWTE1
@@ -526,16 +526,16 @@ R2
 R4
 R5
 R6
-Z81 8C:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd
-Z82 FC:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd
+Z82 8C:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd
+Z83 FC:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd
 l0
 L6
 VzoaDkdk7>JLIQh>98S8oV1
 R9
 31
-Z83 !s108 1544375565.665000
-Z84 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd|
-Z85 !s107 C:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd|
+Z84 !s108 1544381552.950000
+Z85 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd|
+Z86 !s107 C:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd|
 R13
 R14
 !s100 Mg@[lNXnTbYd=b>5XT0[[1
@@ -551,9 +551,9 @@ L19
 V2Nojj4<BOTm<XA<gKI^]Q0
 R9
 31
-R83
 R84
 R85
+R86
 R13
 R14
 !s100 5iLkPz<][NVYgo=]YQezc0

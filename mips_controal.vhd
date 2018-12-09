@@ -1,5 +1,6 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
+use work.mips_pkg.all;
 
 ENTITY mips_controal IS
 
@@ -28,7 +29,7 @@ ARCHITECTURE control_op OF mips_controal IS
 	BEGIN
 		IF (clk_50'EVENT and clk_50 = '1') THEN
 			CASE opcode IS
-				WHEN "100011" =>
+				WHEN iLW =>
 				--LW
 				RegDest	<='0';
 				jump		<='0';
@@ -40,7 +41,7 @@ ARCHITECTURE control_op OF mips_controal IS
 				ALUsrc	<='1';
 				RegWrite <='1';
 				
-				WHEN "101011" =>
+				WHEN iSW =>
 				--SW
 				RegDest	<='0';
 				jump		<='0';
@@ -52,7 +53,7 @@ ARCHITECTURE control_op OF mips_controal IS
 				ALUsrc	<='1';
 				RegWrite <='0';
 				
-				WHEN "000000" =>
+				WHEN iRTYPE =>
 				--ADD, SUB, AND, OR, NOR, XOR, SLT, SLL, SRL, SRA, 
 				RegDest	<='1';
 				jump		<='0';
@@ -64,7 +65,7 @@ ARCHITECTURE control_op OF mips_controal IS
 				ALUsrc	<='0';
 				RegWrite <='1';
 				
-				WHEN "001000" =>
+				WHEN iADDI =>
 				--ADDI
 				RegDest	<='0';
 				jump		<='0';
@@ -76,7 +77,19 @@ ARCHITECTURE control_op OF mips_controal IS
 				ALUsrc	<='1';
 				RegWrite <='1';
 				
-				WHEN "000010" =>
+				WHEN iORI =>
+				--ORI
+				RegDest	<='0';
+				jump		<='0';
+				branch	<='0';
+				MemRead	<='0';
+				MemToReg	<='0';
+				ALUop		<="10";
+				MemWrite	<='0';
+				ALUsrc	<='1';
+				RegWrite <='1';
+				
+				WHEN iJ =>
 				--J
 				RegDest	<='0';
 				jump		<='1';
@@ -88,7 +101,7 @@ ARCHITECTURE control_op OF mips_controal IS
 				ALUsrc	<='0';
 				RegWrite <='0';
 				
-				WHEN "000100" =>
+				WHEN iBEQ =>
 				--BEQ
 				RegDest	<='0';
 				jump		<='0';
@@ -100,17 +113,17 @@ ARCHITECTURE control_op OF mips_controal IS
 				ALUsrc	<='0';
 				RegWrite <='0';
 				
-				--WHEN "000101" =>
+				WHEN iBNE =>
 				--BNE
-				--RegDest	<='0';
-				--jump		<='0';
-				--branch	<='1';
-				--MemRead	<='0';
-				--MemToReg	<='0';
-				--ALUop		<="01";
-				--MemWrite	<='0';
-				--ALUsrc	<='0';
-				--RegWrite <='0';
+				RegDest	<='0';
+				jump		<='0';
+				branch	<='1';
+				MemRead	<='0';
+				MemToReg	<='0';
+				ALUop		<="01";
+				MemWrite	<='0';
+				ALUsrc	<='0';
+				RegWrite <='0';
 				
 				WHEN OTHERS =>
 				--NOP

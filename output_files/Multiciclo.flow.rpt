@@ -1,5 +1,5 @@
 Flow report for Multiciclo
-Sun Dec 09 15:12:25 2018
+Sun Dec 09 16:52:22 2018
 Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +------------------------------------+------------------------------------------+
-; Flow Status                        ; Successful - Sun Dec 09 15:12:25 2018    ;
+; Flow Status                        ; Successful - Sun Dec 09 16:52:22 2018    ;
 ; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; Multiciclo                               ;
 ; Top-level Entity Name              ; Multiciclo                               ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/09/2018 15:11:49 ;
+; Start date & time ; 12/09/2018 16:51:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Multiciclo          ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 277375815774505.154437550953260       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 277375815774505.154438150112444       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i1                                    ; --            ; --          ; tb             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                    ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation ;
@@ -99,12 +99,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 4701 MB             ; 00:00:10                           ;
-; Fitter                    ; 00:00:14     ; 2.6                     ; 4970 MB             ; 00:00:21                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4615 MB             ; 00:00:03                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4692 MB             ; 00:00:09                           ;
+; Fitter                    ; 00:00:15     ; 2.8                     ; 4978 MB             ; 00:00:21                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4619 MB             ; 00:00:03                           ;
 ; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4694 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4571 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:32     ; --                      ; --                  ; 00:00:37                           ;
+; Total                     ; 00:00:35     ; --                      ; --                  ; 00:00:36                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
