@@ -1,7 +1,7 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 
-ENTITY mips_control IS
+ENTITY mips_controal IS
 
 	PORT
 	(
@@ -20,7 +20,7 @@ ENTITY mips_control IS
 	
 END ENTITY;
 
-ARCHITECTURE control_op OF mips_control IS
+ARCHITECTURE control_op OF mips_controal IS
 
 	BEGIN
 	

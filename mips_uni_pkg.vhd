@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 
-package mips_pkg is
+package mips_uni_pkg is
 
 	-- Type Declaration (optional)
 	type word_array is array (natural range<>) of std_logic_vector(31 downto 0);
@@ -202,10 +202,10 @@ end component;
 --							signal z 	: out std_logic_vector(WORD_SIZE-1 downto 0) );
 	
 	
-end mips_pkg;
+end mips_uni_pkg;
 
 
-package body mips_pkg is
+package body mips_uni_pkg is
 
 	-- Type Declaration (optional)
 
@@ -231,4 +231,4 @@ package body mips_pkg is
 	
 
 
-end mips_pkg;
+end mips_uni_pkg;

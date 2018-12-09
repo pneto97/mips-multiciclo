@@ -5,7 +5,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use work.mips_pkg.all;
 
-entity mips_multi is
+entity Multiciclo is
 	port 
 	(
 		clk		: in std_logic;
@@ -16,7 +16,7 @@ entity mips_multi is
 	);
 end entity;
 
-architecture rtl of mips_multi is
+architecture rtl of Multiciclo is
 
 --=======================================================================
 -- Convencoes:
