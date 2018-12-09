@@ -114,15 +114,15 @@ new_state: process (opcode, pstate)
 			when fetch_st => 	nstate <= decode_st;
 			when decode_st =>	case opcode is
 									when iRTYPE => nstate <= rtype_ex_st;
-									when iLW | iSW | iADDI => nstate <= c_mem_add_st;
+									when iLW | iSW | iADDI | iORI | iANDI | iLH | iLHU | iLB | iLBU | iSH | iSB  => nstate <= c_mem_add_st;
 									when iBEQ | iBNE => nstate <= branch_ex_st;
 									when iJ => nstate <= jump_ex_st;
 									when others => null;
 									end case;
 			when c_mem_add_st => case opcode is 
-									when iLW => nstate <= readmem_st;
-									when iSW => nstate <= writemem_st;
-									when iADDI => nstate <= arith_imm_st;
+									when iLW | iLH | iLHU | iLB | iLBU => nstate <= readmem_st;
+									when iSW | iSH | iSB => nstate <= writemem_st;
+									when iADDI | iORI | iANDI => nstate <= arith_imm_st;
 									when others => null;
 								 end case;
 			when readmem_st 	=> nstate <= ldreg_st;
