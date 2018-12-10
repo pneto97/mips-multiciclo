@@ -45,6 +45,7 @@ signal
 			aluA_v,			-- entrada A da ULA
 			aluB_v,			-- entrada B da ULA
 			alu_out_v,		-- saida ULA
+			PCouA_v,			-- saida do mux que decide entre o PC ou a saida A do reg
 			instruction_v,	-- saida do reg de instrucoes
 			imm32_x4_v,	   -- imediato extendido e multiplicado por 4
 			imm32_v,			-- imediato extendido a 32 bits
@@ -58,7 +59,6 @@ signal rset_s, clock_s 	: std_logic;
 signal iwreg_v 			: std_logic_vector(4 downto 0);  -- indice registador escrito
 signal alu_sel_v			: std_logic_vector(3 downto 0);  -- indice registador escrito
 signal sel_aluB_v 		: std_logic_vector(1 downto 0);	-- seleciona entrada B da ula
-signal sel_aluA_v 		: std_logic_vector(1 downto 0);	-- seleciona entrada A da ula
 signal alu_op_v			: std_logic_vector(1 downto 0);	-- codigo op ula
 signal org_pc_v			: std_logic_vector(1 downto 0);	-- selecao entrada do PC
 
@@ -75,7 +75,9 @@ signal
 			pc_wr_s,			-- escreve pc
 			reg_dst_s,		-- controle endereco reg
 			reg_wr_s,		-- escreve breg
-			sel_extensor_v,-- seleciona o extensor (imm sem sinal ou imm com sinal)
+			sel_aluA_s,		-- seleciona entrada A da ula
+			sel_shamt_s,	-- seleciona o shamt ou nao para operacoes shift
+			sel_extensor_s,-- seleciona o extensor (imm sem sinal ou imm com sinal)
 			sel_end_mem_s,	-- seleciona endereco memoria
 			zero_s			-- sinal zero da ula
 			: std_logic;
@@ -225,21 +227,31 @@ mux_extensor: mux_2
 		port map (
 			in0 	=> imm32_v, 
 			in1 	=> imm32usng_v,
-			sel 	=> sel_extensor_v,
+			sel 	=> sel_extensor_s,
 			m_out => ext_out_v
 		);	
 
 		
 --=======================================================================
+-- Mux para escolher o shamt ou a saida do mux de cima da ula (Pc ou A)
+--=======================================================================		
+mux_shift: mux_2
+		port map (
+			in0 	=> PCouA_v, 
+			in1 	=> shamt32usng_v,
+			sel 	=> sel_shamt_s,
+			m_out => aluA_v
+		);
+		
+--=======================================================================
 -- Mux para selecao da entrada de cima da ula
 --=======================================================================		
-mux_ulaA: mux_3
+mux_ulaA: mux_2
 		port map (
 			in0 	=> pcout_v, 
 			in1 	=> regA_v,
-			in2	=>	shamt32usng_v,
-			sel 	=> sel_aluA_v,
-			m_out => aluA_v
+			sel 	=> sel_aluA_s,
+			m_out => PCouA_v
 		);
 		
 --=======================================================================
@@ -262,7 +274,8 @@ actr: alu_ctr
 			port map (
 				op_alu 	=> alu_op_v,
 				funct	 	=> func_field_v,
-				alu_ctr	=> alu_sel_v
+				alu_ctr	=> alu_sel_v,
+				shift => sel_shamt_s
 			);
 
 --=======================================================================
@@ -314,11 +327,11 @@ ctr_mips: mips_control
 			op_alu	=> alu_op_v,
 			s_mem_add => sel_end_mem_s,
 			s_PCin	=> org_pc_v,
-			s_aluAin => sel_aluA_v,
+			s_aluAin => sel_aluA_s,
 			s_aluBin => sel_aluB_v,
 			wr_breg	=> reg_wr_s,
 			s_reg_add => reg_dst_s,
-			s_extensor_imm => sel_extensor_v
+			s_extensor_imm => sel_extensor_s
 		);
 		
 end architecture;

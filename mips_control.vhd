@@ -17,7 +17,7 @@ ENTITY mips_control IS
 		op_alu	: OUT std_logic_vector (1 DOWNTO 0);
 		s_mem_add: OUT std_logic;
 		s_PCin	: OUT std_logic_vector (1 DOWNTO 0);
-		s_aluAin : OUT std_logic_vector (1 DOWNTO 0);
+		s_aluAin : OUT std_logic;
 		s_aluBin : OUT std_logic_vector (1 DOWNTO 0); 
 		wr_breg	: OUT std_logic;
 		s_reg_add: OUT std_logic;
@@ -65,10 +65,10 @@ logic: process (opcode, pstate)
 		s_datareg 	<= '0';
 		s_mem_add 	<= '0';
 		s_PCin		<= "00";
-		s_aluAin 	<= "00"; -- Agora são 2 bits pois o campo shamt entra no mux
+		s_aluAin 	<= '0';
 		s_aluBin  	<= "00";
 		s_reg_add 	<= '0';
-		s_extensor_imm <= '0';
+		s_extensor_imm <= '0'; -- Novo sinal que escolhe se vai extender com sinal (0) ou sem sinal (1)
 		
 		case pstate is 
 			when fetch_st 		=> wr_pc 	<= '1';
@@ -77,9 +77,9 @@ logic: process (opcode, pstate)
 								
 			when decode_st 	=>	s_aluBin <= "11";
 								
-			when c_mem_add_st => s_aluAin <= "01";
+			when c_mem_add_st => s_aluAin <= '1';
 										s_aluBin <= "10";
-										
+									
 			when readmem_st 	=> s_mem_add <= '1';
 								 
 			when ldreg_st 		=>	s_datareg <= '1';
@@ -88,13 +88,14 @@ logic: process (opcode, pstate)
 			when writemem_st 	=> wr_mem 	 <= '1';
 										s_mem_add <= '1';
 									
-			when rtype_ex_st	=> s_aluAin <= "01";
-										op_alu <= "10";
+			when rtype_ex_st	=> 	op_alu <= "10";
+											s_aluAin <= '1';
+										
 									
 			when writereg_st 	=> s_reg_add <= '1';
 										wr_breg <= '1';
 								  
-			when branch_ex_st => s_aluAin <= "01";
+			when branch_ex_st => s_aluAin <= '1';
 										op_alu <= "01";
 										s_PCin <= "01";
 										if opcode = iBEQ 

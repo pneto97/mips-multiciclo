@@ -18,6 +18,8 @@ vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/mips_control.vhd}
 vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/extsgn.vhd}
 vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/breg.vhd}
 vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/alu_ctr.vhd}
+vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/extusgn.vhd}
+vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/extshamt.vhd}
 
 vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd}
 

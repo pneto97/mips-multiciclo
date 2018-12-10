@@ -3,7 +3,7 @@
     <hash md5_digest_80b="00000000000000000000"/>
   </project>
   <file_info>
-    <file checksum="0x0070C934" device="EP2C70F896C6" path="Multiciclo.sof" usercode="0xFFFFFFFF"/>
-    <file checksum="0x18629FA0" device="EPCS16" path="Multiciclo.pof" usercode="0x00000000"/>
+    <file checksum="0x00709385" device="EP2C70F896C6" path="Multiciclo.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x186ABEC8" device="EPCS16" path="Multiciclo.pof" usercode="0x00000000"/>
   </file_info>
 </sld_project_info>
