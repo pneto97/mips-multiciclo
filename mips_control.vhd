@@ -38,8 +38,9 @@ ARCHITECTURE control_op OF mips_control IS
 								writereg_st, 
 								branch_ex_st, 
 								jump_ex_st,
-								arith_imm_st);  -- escreve resultado op arit. imediato
-
+								arith_imm_st, -- escreve resultado op arit. imediato
+								logic_imm_st -- escreve resultado op arit. logic
+								);  
 	signal pstate, nstate : ctr_state;
 
 	BEGIN
@@ -105,7 +106,14 @@ logic: process (opcode, pstate)
 									
 			when jump_ex_st 	=>	s_PCin  <= "10";
 										wr_pc   <= '1';
+										
 			when arith_imm_st => wr_breg <= '1';
+										s_extensor_imm <= '0'; -- imediato extende com sinal
+										s_reg_add <= '0'; -- escreve em rt
+										
+			when logic_imm_st => wr_breg <= '1';
+										s_extensor_imm <= '1'; -- imediato extende sem sinal
+										s_reg_add <= '0'; -- escreve em rt
 		end case;
 	end process;
 	
@@ -118,7 +126,7 @@ new_state: process (opcode, pstate)
 			when fetch_st => 	nstate <= decode_st;
 			when decode_st =>	case opcode is
 									when iRTYPE => nstate <= rtype_ex_st;
-									when iLW | iSW | iADDI | iORI | iANDI | iLH | iLHU | iLB | iLBU | iSH | iSB  => nstate <= c_mem_add_st; -- adicionei aqui as novas instrucoes, n tenho certeza
+									when iLW | iSW | iADDI | iORI | iANDI | iLH | iLHU | iLB | iLBU | iSH | iSB  => nstate <= c_mem_add_st; 
 									when iBEQ | iBNE => nstate <= branch_ex_st;
 									when iJ => nstate <= jump_ex_st;
 									when others => null;
@@ -126,7 +134,8 @@ new_state: process (opcode, pstate)
 			when c_mem_add_st => case opcode is 
 									when iLW | iLH | iLHU | iLB | iLBU => nstate <= readmem_st; -- aqui ficaram todas as instrucoes de leitura da mem
 									when iSW | iSH | iSB => nstate <= writemem_st; -- aqui ficaram todas as instrucoes de escrita da mem
-									when iADDI | iORI | iANDI => nstate <= arith_imm_st; -- aqui ficaram as instrucoes aritmeticas com imm, n tenho ctz
+									when iADDI => nstate <= arith_imm_st; -- aqui ficaram as instrucoes aritmeticas com imm, n tenho ctz
+									when iORI | iANDI => nstate <= logic_imm_st; -- instrucoes logicas
 									when others => null;
 								 end case;
 			when readmem_st 	=> nstate <= ldreg_st;
