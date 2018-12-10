@@ -20,7 +20,8 @@ ENTITY mips_control IS
 		s_aluAin : OUT std_logic_vector (1 DOWNTO 0);
 		s_aluBin : OUT std_logic_vector (1 DOWNTO 0); 
 		wr_breg	: OUT std_logic;
-		s_reg_add: OUT std_logic
+		s_reg_add: OUT std_logic;
+		s_extensor_imm : OUT std_logic -- Novo sinal para controlar o mux que faz extensão de sinal (0 com sinal, 1 sem sinal)
 	);
 	
 END ENTITY;
@@ -67,6 +68,8 @@ logic: process (opcode, pstate)
 		s_aluAin 	<= "00"; -- Agora são 2 bits pois o campo shamt entra no mux
 		s_aluBin  	<= "00";
 		s_reg_add 	<= '0';
+		s_extensor_imm <= '0';
+		
 		case pstate is 
 			when fetch_st 		=> wr_pc 	<= '1';
 										s_aluBin <= "01";

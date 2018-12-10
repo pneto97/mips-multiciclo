@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Multiciclo
-Mon Dec 10 00:19:56 2018
+Mon Dec 10 00:43:21 2018
 Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -76,13 +76,13 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 10 00:19:56 2018    ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 10 00:43:21 2018    ;
 ; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; Multiciclo                               ;
 ; Top-level Entity Name              ; Multiciclo                               ;
 ; Family                             ; Cyclone II                               ;
-; Total logic elements               ; 1,188                                    ;
-;     Total combinational functions  ; 1,122                                    ;
+; Total logic elements               ; 1,182                                    ;
+;     Total combinational functions  ; 1,116                                    ;
 ;     Dedicated logic registers      ; 241                                      ;
 ; Total registers                    ; 241                                      ;
 ; Total pins                         ; 37                                       ;
@@ -235,16 +235,16 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,188 ;
+; Estimated Total logic elements              ; 1,182 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1122  ;
+; Total combinational functions               ; 1116  ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 830   ;
-;     -- 3 input functions                    ; 265   ;
-;     -- <=2 input functions                  ; 27    ;
+;     -- 3 input functions                    ; 262   ;
+;     -- <=2 input functions                  ; 24    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1060  ;
+;     -- normal mode                          ; 1054  ;
 ;     -- arithmetic mode                      ; 62    ;
 ;                                             ;       ;
 ; Total registers                             ; 241   ;
@@ -255,8 +255,8 @@ applicable agreement for further details.
 ; Total memory bits                           ; 10240 ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out                             ; 305   ;
-; Total fan-out                               ; 6088  ;
-; Average fan-out                             ; 4.07  ;
+; Total fan-out                               ; 6073  ;
+; Average fan-out                             ; 4.08  ;
 +---------------------------------------------+-------+
 
 
@@ -265,14 +265,14 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
-; |Multiciclo                               ; 1122 (66)         ; 241 (0)      ; 10240       ; 0            ; 0       ; 0         ; 37   ; 0            ; |Multiciclo                                                                             ;              ;
+; |Multiciclo                               ; 1116 (66)         ; 241 (0)      ; 10240       ; 0            ; 0       ; 0         ; 37   ; 0            ; |Multiciclo                                                                             ;              ;
 ;    |alu_ctr:actr|                         ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|alu_ctr:actr                                                                ;              ;
 ;    |breg:bcoreg|                          ; 76 (76)           ; 38 (38)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg                                                                 ;              ;
 ;       |altsyncram:breg32_rtl_0|           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_0                                         ;              ;
 ;          |altsyncram_bnd1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_0|altsyncram_bnd1:auto_generated          ;              ;
 ;       |altsyncram:breg32_rtl_1|           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_1                                         ;              ;
 ;          |altsyncram_bnd1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_1|altsyncram_bnd1:auto_generated          ;              ;
-;    |mips_control:ctr_mips|                ; 27 (27)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_control:ctr_mips                                                       ;              ;
+;    |mips_control:ctr_mips|                ; 26 (26)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_control:ctr_mips                                                       ;              ;
 ;    |mips_mem:mem|                         ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_mem:mem                                                                ;              ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_mem:mem|altsyncram:altsyncram_component                                ;              ;
 ;          |altsyncram_16d1:auto_generated| ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_mem:mem|altsyncram:altsyncram_component|altsyncram_16d1:auto_generated ;              ;
@@ -280,14 +280,14 @@ applicable agreement for further details.
 ;    |mux_2:mux_mem|                        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_2:mux_mem                                                               ;              ;
 ;    |mux_2:mux_reg_add|                    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_2:mux_reg_add                                                           ;              ;
 ;    |mux_3:mux_ulaA|                       ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_3:mux_ulaA                                                              ;              ;
-;    |mux_4:mux_ulaB|                       ; 51 (51)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_4:mux_ulaB                                                              ;              ;
+;    |mux_4:mux_ulaB|                       ; 52 (52)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_4:mux_ulaB                                                              ;              ;
 ;    |reg:ir|                               ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|reg:ir                                                                      ;              ;
 ;    |reg:pc|                               ; 34 (34)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|reg:pc                                                                      ;              ;
 ;    |regbuf:rdm|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:rdm                                                                  ;              ;
 ;    |regbuf:regULA|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:regULA                                                               ;              ;
 ;    |regbuf:rgA|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:rgA                                                                  ;              ;
 ;    |regbuf:rgB|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:rgB                                                                  ;              ;
-;    |ulamips:alu|                          ; 775 (775)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|ulamips:alu                                                                 ;              ;
+;    |ulamips:alu|                          ; 769 (769)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|ulamips:alu                                                                 ;              ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -501,13 +501,12 @@ Encoding Type:  One-Hot
 ; 5:1                ; 26 bits   ; 78 LEs        ; 52 LEs               ; 26 LEs                 ; Yes        ; |Multiciclo|reg:pc|sr_out[12]        ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Multiciclo|data                     ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Multiciclo|alu_ctr:actr|alu_ctr[1]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Multiciclo|mux_4:mux_ulaB|m_out[1]  ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |Multiciclo|mux_4:mux_ulaB|m_out[13] ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; No         ; |Multiciclo|mux_4:mux_ulaB|m_out[31] ;
-; 23:1               ; 7 bits    ; 105 LEs       ; 70 LEs               ; 35 LEs                 ; No         ; |Multiciclo|ulamips:alu|Mux14        ;
-; 22:1               ; 7 bits    ; 98 LEs        ; 63 LEs               ; 35 LEs                 ; No         ; |Multiciclo|ulamips:alu|Mux17        ;
-; 24:1               ; 4 bits    ; 64 LEs        ; 40 LEs               ; 24 LEs                 ; No         ; |Multiciclo|ulamips:alu|Mux7         ;
-; 23:1               ; 4 bits    ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |Multiciclo|ulamips:alu|Mux27        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Multiciclo|mux_4:mux_ulaB|m_out[0]  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Multiciclo|mux_4:mux_ulaB|m_out[12] ;
+; 23:1               ; 7 bits    ; 105 LEs       ; 70 LEs               ; 35 LEs                 ; No         ; |Multiciclo|ulamips:alu|Mux12        ;
+; 22:1               ; 7 bits    ; 98 LEs        ; 63 LEs               ; 35 LEs                 ; No         ; |Multiciclo|ulamips:alu|Mux21        ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 40 LEs               ; 24 LEs                 ; No         ; |Multiciclo|ulamips:alu|Mux4         ;
+; 23:1               ; 4 bits    ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |Multiciclo|ulamips:alu|Mux24        ;
 ; 25:1               ; 2 bits    ; 32 LEs        ; 20 LEs               ; 12 LEs                 ; No         ; |Multiciclo|ulamips:alu|Mux2         ;
 ; 24:1               ; 2 bits    ; 32 LEs        ; 20 LEs               ; 12 LEs                 ; No         ; |Multiciclo|ulamips:alu|Mux29        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
@@ -1007,7 +1006,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -1017,7 +1016,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Mon Dec 10 00:19:39 2018
+    Info: Processing started: Mon Dec 10 00:43:09 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multiciclo -c Multiciclo
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file ulamips.vhd
@@ -1096,7 +1095,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file extsham
     Info (12022): Found design unit 1: extshamt-wires
     Info (12023): Found entity 1: extshamt
 Info (12127): Elaborating entity "Multiciclo" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at mips_multi.vhd(66): used implicit default value for signal "sel_extensor_v" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "reg" for hierarchy "reg:pc"
 Info (12128): Elaborating entity "mux_2" for hierarchy "mux_2:mux_mem"
 Info (12128): Elaborating entity "mips_mem" for hierarchy "mips_mem:mem"
@@ -1184,15 +1182,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_bnd1
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1391 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1385 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 1258 logic cells
+    Info (21061): Implemented 1252 logic cells
     Info (21064): Implemented 96 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4693 megabytes
-    Info: Processing ended: Mon Dec 10 00:19:56 2018
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:13
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4692 megabytes
+    Info: Processing ended: Mon Dec 10 00:43:21 2018
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:10
 
 

@@ -212,7 +212,8 @@ package mips_pkg is
 		s_aluAin : OUT std_logic_vector (1 DOWNTO 0);
 		s_aluBin : OUT std_logic_vector (1 DOWNTO 0); 
 		wr_breg	: OUT std_logic;
-		s_reg_add: OUT std_logic
+		s_reg_add: OUT std_logic;
+		s_extensor_imm: OUT std_logic -- novo sinal para extender com ou sem sinal
 	);
 	END component;
 	

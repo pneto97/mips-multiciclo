@@ -3438,5 +3438,6 @@ s_aluBin[0] <= s_aluBin.DB_MAX_OUTPUT_PORT_TYPE
 s_aluBin[1] <= s_aluBin.DB_MAX_OUTPUT_PORT_TYPE
 wr_breg <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 s_reg_add <= s_reg_add.DB_MAX_OUTPUT_PORT_TYPE
+s_extensor_imm <= <GND>
 
 

@@ -317,7 +317,8 @@ ctr_mips: mips_control
 			s_aluAin => sel_aluA_v,
 			s_aluBin => sel_aluB_v,
 			wr_breg	=> reg_wr_s,
-			s_reg_add => reg_dst_s
+			s_reg_add => reg_dst_s,
+			s_extensor_imm => sel_extensor_v
 		);
 		
 end architecture;
