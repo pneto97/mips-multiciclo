@@ -47,7 +47,10 @@ signal
 			alu_out_v,		-- saida ULA
 			instruction_v,	-- saida do reg de instrucoes
 			imm32_x4_v,	   -- imediato extendido e multiplicado por 4
-			imm32_v			-- imediato extendido a 32 bits
+			imm32_v,			-- imediato extendido a 32 bits
+			imm32usng_v,	-- imediato extendido sem sinal a 32 bits
+			shamt32usng_v,	-- shamt extendido sem sinal a 32 bits
+			ext_out_v		-- o valor extendido final de acordo o sel_extensor_v
 			: std_logic_vector(WORD_SIZE-1 downto 0);
 			
 signal addsht2_v 			: std_logic_vector(WORD_SIZE-1 downto 0);
@@ -55,6 +58,7 @@ signal rset_s, clock_s 	: std_logic;
 signal iwreg_v 			: std_logic_vector(4 downto 0);  -- indice registador escrito
 signal alu_sel_v			: std_logic_vector(3 downto 0);  -- indice registador escrito
 signal sel_aluB_v 		: std_logic_vector(1 downto 0);	-- seleciona entrada B da ula
+signal sel_aluA_v 		: std_logic_vector(1 downto 0);	-- seleciona entrada A da ula
 signal alu_op_v			: std_logic_vector(1 downto 0);	-- codigo op ula
 signal org_pc_v			: std_logic_vector(1 downto 0);	-- selecao entrada do PC
 
@@ -71,8 +75,8 @@ signal
 			pc_wr_s,			-- escreve pc
 			reg_dst_s,		-- controle endereco reg
 			reg_wr_s,		-- escreve breg
+			sel_extensor_v,-- seleciona o extensor (imm sem sinal ou imm com sinal)
 			sel_end_mem_s,	-- seleciona endereco memoria
-			sel_aluA_s,		-- seleciona entrada A da ula
 			zero_s			-- sinal zero da ula
 			: std_logic;
 			
@@ -199,13 +203,42 @@ sgnx:	extsgn
 		);
 
 --=======================================================================
+-- Modulo de extensao sem sinal: 16 para 32 bits
+--=======================================================================
+usgnx:	extusgn
+		port map (
+			input => imm16_field_v, output => imm32usng_v
+		);
+		
+--=======================================================================
+-- Modulo de extensao do shamt (sem sinal): 5 para 32 bits
+--=======================================================================
+shamtx:	extshamt
+		port map (
+			input => sht_field_v, output => shamt32usng_v
+		);
+		
+--=======================================================================
+-- Mux para selecao de qual extensor de sinal devo usar
+--=======================================================================		
+mux_extensor: mux_2
+		port map (
+			in0 	=> imm32_v, 
+			in1 	=> imm32usng_v,
+			sel 	=> sel_extensor_v,
+			m_out => ext_out_v
+		);	
+
+		
+--=======================================================================
 -- Mux para selecao da entrada de cima da ula
 --=======================================================================		
-mux_ulaA: mux_2
+mux_ulaA: mux_3
 		port map (
 			in0 	=> pcout_v, 
 			in1 	=> regA_v,
-			sel 	=> sel_aluA_s,
+			in2	=>	shamt32usng_v,
+			sel 	=> sel_aluA_v,
 			m_out => aluA_v
 		);
 		
@@ -216,7 +249,7 @@ mux_ulaB: mux_4
 		port map (
 			in0 	=> regB_v, 
 			in1 	=> INC_PC,
-			in2	=> imm32_v,
+			in2	=> ext_out_v,
 			in3	=> imm32_x4_v,
 			sel 	=> sel_aluB_v,
 			m_out => aluB_v
@@ -281,7 +314,7 @@ ctr_mips: mips_control
 			op_alu	=> alu_op_v,
 			s_mem_add => sel_end_mem_s,
 			s_PCin	=> org_pc_v,
-			s_aluAin => sel_aluA_s,
+			s_aluAin => sel_aluA_v,
 			s_aluBin => sel_aluB_v,
 			wr_breg	=> reg_wr_s,
 			s_reg_add => reg_dst_s

@@ -17,7 +17,7 @@ ENTITY mips_control IS
 		op_alu	: OUT std_logic_vector (1 DOWNTO 0);
 		s_mem_add: OUT std_logic;
 		s_PCin	: OUT std_logic_vector (1 DOWNTO 0);
-		s_aluAin : OUT std_logic;
+		s_aluAin : OUT std_logic_vector (1 DOWNTO 0);
 		s_aluBin : OUT std_logic_vector (1 DOWNTO 0); 
 		wr_breg	: OUT std_logic;
 		s_reg_add: OUT std_logic
@@ -64,7 +64,7 @@ logic: process (opcode, pstate)
 		s_datareg 	<= '0';
 		s_mem_add 	<= '0';
 		s_PCin		<= "00";
-		s_aluAin 	<= '0';
+		s_aluAin 	<= "00"; -- Agora são 2 bits pois o campo shamt entra no mux
 		s_aluBin  	<= "00";
 		s_reg_add 	<= '0';
 		case pstate is 
@@ -74,7 +74,7 @@ logic: process (opcode, pstate)
 								
 			when decode_st 	=>	s_aluBin <= "11";
 								
-			when c_mem_add_st => s_aluAin <= '1';
+			when c_mem_add_st => s_aluAin <= "01";
 										s_aluBin <= "10";
 										
 			when readmem_st 	=> s_mem_add <= '1';
@@ -85,13 +85,13 @@ logic: process (opcode, pstate)
 			when writemem_st 	=> wr_mem 	 <= '1';
 										s_mem_add <= '1';
 									
-			when rtype_ex_st	=> s_aluAin <= '1';
+			when rtype_ex_st	=> s_aluAin <= "01";
 										op_alu <= "10";
 									
 			when writereg_st 	=> s_reg_add <= '1';
 										wr_breg <= '1';
 								  
-			when branch_ex_st => s_aluAin <= '1';
+			when branch_ex_st => s_aluAin <= "01";
 										op_alu <= "01";
 										s_PCin <= "01";
 										if opcode = iBEQ 
@@ -114,15 +114,15 @@ new_state: process (opcode, pstate)
 			when fetch_st => 	nstate <= decode_st;
 			when decode_st =>	case opcode is
 									when iRTYPE => nstate <= rtype_ex_st;
-									when iLW | iSW | iADDI | iORI | iANDI | iLH | iLHU | iLB | iLBU | iSH | iSB  => nstate <= c_mem_add_st;
+									when iLW | iSW | iADDI | iORI | iANDI | iLH | iLHU | iLB | iLBU | iSH | iSB  => nstate <= c_mem_add_st; -- adicionei aqui as novas instrucoes, n tenho certeza
 									when iBEQ | iBNE => nstate <= branch_ex_st;
 									when iJ => nstate <= jump_ex_st;
 									when others => null;
 									end case;
 			when c_mem_add_st => case opcode is 
-									when iLW | iLH | iLHU | iLB | iLBU => nstate <= readmem_st;
-									when iSW | iSH | iSB => nstate <= writemem_st;
-									when iADDI | iORI | iANDI => nstate <= arith_imm_st;
+									when iLW | iLH | iLHU | iLB | iLBU => nstate <= readmem_st; -- aqui ficaram todas as instrucoes de leitura da mem
+									when iSW | iSH | iSB => nstate <= writemem_st; -- aqui ficaram todas as instrucoes de escrita da mem
+									when iADDI | iORI | iANDI => nstate <= arith_imm_st; -- aqui ficaram as instrucoes aritmeticas com imm, n tenho ctz
 									when others => null;
 								 end case;
 			when readmem_st 	=> nstate <= ldreg_st;

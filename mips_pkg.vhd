@@ -18,16 +18,16 @@ package mips_pkg is
 	-- Instrucoes do MIPs
 	constant iRTYPE		: std_logic_vector(5 downto 0) := "000000";
 	constant iLW			: std_logic_vector(5 downto 0) := "100011";
-	constant iLB			: std_logic_vector(5 downto 0) := "100000";
-	constant iLBU			: std_logic_vector(5 downto 0) := "100100";
-	constant iLH			: std_logic_vector(5 downto 0) := "100001";
-	constant iLHU			: std_logic_vector(5 downto 0) := "100101";
+	constant iLB			: std_logic_vector(5 downto 0) := "100000"; -- adicionei essa
+	constant iLBU			: std_logic_vector(5 downto 0) := "100100"; -- adicionei essa
+	constant iLH			: std_logic_vector(5 downto 0) := "100001"; -- adicionei essa
+	constant iLHU			: std_logic_vector(5 downto 0) := "100101"; -- adicionei essa
 	constant iSW			: std_logic_vector(5 downto 0) := "101011";
-	constant iSB			: std_logic_vector(5 downto 0) := "101000";
-	constant iSH			: std_logic_vector(5 downto 0) := "101001";
+	constant iSB			: std_logic_vector(5 downto 0) := "101000"; -- adicionei essa
+	constant iSH			: std_logic_vector(5 downto 0) := "101001"; -- adicionei essa
 	constant iADDI			: std_logic_vector(5 downto 0) := "001000";
-	constant iORI			: std_logic_vector(5 downto 0) := "001101";
-	constant iANDI			: std_logic_vector(5 downto 0) := "001100";
+	constant iORI			: std_logic_vector(5 downto 0) := "001101"; -- adicionei essa
+	constant iANDI			: std_logic_vector(5 downto 0) := "001100"; -- adicionei essa
 	constant iJ				: std_logic_vector(5 downto 0) := "000010";
 	constant iBEQ			: std_logic_vector(5 downto 0) := "000100";
 	constant iBNE			: std_logic_vector(5 downto 0) := "000101";
@@ -209,7 +209,7 @@ package mips_pkg is
 		op_alu	: OUT std_logic_vector (1 DOWNTO 0);
 		s_mem_add: OUT std_logic;
 		s_PCin	: OUT std_logic_vector (1 DOWNTO 0);
-		s_aluAin : OUT std_logic;
+		s_aluAin : OUT std_logic_vector (1 DOWNTO 0);
 		s_aluBin : OUT std_logic_vector (1 DOWNTO 0); 
 		wr_breg	: OUT std_logic;
 		s_reg_add: OUT std_logic
@@ -242,7 +242,37 @@ component extsgn is
 		);
 end component;
 
+component extusgn is
+	generic (
+		IN_SIZE : natural := 16;
+		OUT_SIZE : natural := 32	
+		);
+	port (
+		input : in std_logic_vector(IN_SIZE-1 downto 0);
+		output: out std_logic_vector(OUT_SIZE-1 downto 0)
+		);
+end component;
+
+component extshamt is
+	generic (
+		IN_SIZE : natural := 5;
+		OUT_SIZE : natural := 32	
+		);
+	port (
+		input : in std_logic_vector(IN_SIZE-1 downto 0);
+		output: out std_logic_vector(OUT_SIZE-1 downto 0)
+		);
+end component;
+
 component sig_ext is
+	port (
+		imm16	: in std_logic_vector(WORD_SIZE/2 - 1 downto 0);
+		ext32 : out std_logic_vector(WORD_SIZE-1 downto 0)
+		);
+end component;
+
+
+component usig_ext is
 	port (
 		imm16	: in std_logic_vector(WORD_SIZE/2 - 1 downto 0);
 		ext32 : out std_logic_vector(WORD_SIZE-1 downto 0)
