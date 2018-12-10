@@ -15,7 +15,7 @@ entity mips_mem is
 		WADDR : natural := 8);
 	port (
 		address	: IN STD_LOGIC_VECTOR (WADDR-1 DOWNTO 0);
-		clk		: IN STD_LOGIC;
+		clock		: IN STD_LOGIC;
 		data		: IN STD_LOGIC_VECTOR (WIDTH-1 DOWNTO 0);
 		wren		: IN STD_LOGIC ;
 		q			: OUT STD_LOGIC_VECTOR (WIDTH-1 DOWNTO 0));
@@ -84,7 +84,7 @@ architecture rtl of mips_mem is
 	)
 	PORT MAP (
 		address_a => address,
-		clock0 => clk, --clk64,
+		clock0 => clock, --clk64,
 		data_a => data,
 		wren_a => wren,
 		q_a => sub_wire0

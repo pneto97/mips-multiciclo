@@ -156,6 +156,7 @@ package mips_pkg is
 		wren		: IN STD_LOGIC ;
 		q			: OUT STD_LOGIC_VECTOR (WIDTH-1 DOWNTO 0));
 	end component;
+	
 
 	component ulamips is
 	port (
@@ -293,6 +294,18 @@ component mips_mem is
 		q			: OUT STD_LOGIC_VECTOR (WIDTH-1 DOWNTO 0));
 end component;
 
+component mips_ram is
+	PORT
+	(
+		address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		byteena		: IN STD_LOGIC_VECTOR (3 DOWNTO 0) :=  (OTHERS => '1');
+		clock		: IN STD_LOGIC  := '1';
+		data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+		wren		: IN STD_LOGIC ;
+		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	);
+end component;
+
 component data_mem is
 	port
 	(
@@ -301,6 +314,15 @@ component data_mem is
 		data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 		wren		: IN STD_LOGIC ;
 		q			: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	);
+end component;
+
+component decoder2_4 is --seletor de byte para sb
+	port 
+	(			
+			A  : in  STD_LOGIC_VECTOR (1 downto 0);  -- 2-bit input
+			X  : out STD_LOGIC_VECTOR (3 downto 0);  -- 4-bit output
+			EN : in  STD_LOGIC  -- enable input
 	);
 end component;
 

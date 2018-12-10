@@ -61,6 +61,7 @@ signal alu_sel_v			: std_logic_vector(3 downto 0);  -- indice registador escrito
 signal sel_aluB_v 		: std_logic_vector(1 downto 0);	-- seleciona entrada B da ula
 signal alu_op_v			: std_logic_vector(1 downto 0);	-- codigo op ula
 signal org_pc_v			: std_logic_vector(1 downto 0);	-- selecao entrada do PC
+signal byte_en_v			: std_logic_vector(3 downto 0);	-- sinal de byte enable (0001 pega o byte 1, 0010 pega o byte 2, ...)
 
 signal 	
 			branch_s,		-- beq ou bne
@@ -128,10 +129,17 @@ mux_mem: mux_2
 			);
 		
 --=======================================================================
--- Memoria do MIPS
+-- Decodificacao do byte enable
+--=======================================================================	
+decoder: decoder2_4
+		port map
+		( A => memadd_v(1 downto 0), X => byte_en_v, EN => '1');
+
+--=======================================================================
+-- Memoria do MIPS com o byte enable
 --=======================================================================		
-mem:  mips_mem
-		port map (address => memadd_v(9 downto 2), data => regB_v, wren => mem_wr_s, clk => clk_rom, Q => memout_v );
+mem:  mips_ram
+		port map (address => memadd_v(9 downto 2), byteena => byte_en_v, data => regB_v, wren => mem_wr_s, clock => clk_rom, Q => memout_v );
 	
 --=======================================================================
 -- RI - registrador de instruções
