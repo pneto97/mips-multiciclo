@@ -303,6 +303,33 @@ component data_mem is
 		q			: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
 end component;
+
+component byte_select is --seletor de byte para sb
+	port 
+	(
+		w_in	   : in std_logic_vector(WORD_SIZE-1 downto 0); --Palavra de entrada
+		sel		: in std_logic_vector(1 downto 0); --seleciona a posicao do offset
+		w_out	: out std_logic_vector(WORD_SIZE-1 downto 0) -- Palavra de saida com os zeros
+		
+	);
+end component;
+
+component half_word_select is -- seletor da meia palavra para sh
+	port 
+	(
+		w_in	   : in std_logic_vector(WORD_SIZE-1 downto 0); --Palavra de entrada
+		sel		: in std_logic; --seleciona a posicao do offset
+		w_out	: out std_logic_vector(WORD_SIZE-1 downto 0) -- Palavra de saida com os zeros
+		
+	);
+end component;
+
+component mux_32 is	-- mux que seleciona se a palavra é sw, sh ou sb
+		port (
+	 	in0, in1, in2	: in std_logic_vector(WORD_SIZE-1 downto 0);
+		sel						: in std_logic_vector(1 downto 0);
+		m_out						: out std_logic_vector(WORD_SIZE-1 downto 0));
+end component;
 	
 --	procedure mux2x1 (signal x0, x1	: in std_logic_vector(WORD_SIZE-1 downto 0); 
 --							signal sel	: in std_logic;
