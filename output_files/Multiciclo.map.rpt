@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Multiciclo
-Mon Dec 10 15:31:44 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Mon Dec 10 19:12:30 2018
+Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
 ---------------------
@@ -58,7 +58,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
+Copyright (C) 1991-2012 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -74,24 +74,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 10 15:31:44 2018           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; Multiciclo                                      ;
-; Top-level Entity Name              ; Multiciclo                                      ;
-; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1,227                                           ;
-;     Total combinational functions  ; 1,161                                           ;
-;     Dedicated logic registers      ; 242                                             ;
-; Total registers                    ; 242                                             ;
-; Total pins                         ; 37                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 10,240                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Dec 10 19:12:30 2018    ;
+; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Revision Name                      ; Multiciclo                               ;
+; Top-level Entity Name              ; Multiciclo                               ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 1,227                                    ;
+;     Total combinational functions  ; 1,161                                    ;
+;     Dedicated logic registers      ; 242                                      ;
+; Total registers                    ; 242                                      ;
+; Total pins                         ; 37                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 10,240                                   ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -179,50 +179,56 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 2      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-8 processors         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                     ;
-+--------------------------------------------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                               ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                         ; Library ;
-+--------------------------------------------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/ulamips.vhd      ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/ulamips.vhd            ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/regbuf.vhd       ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/regbuf.vhd             ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/reg.vhd          ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/reg.vhd                ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_4.vhd        ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_4.vhd              ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_3.vhd        ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_3.vhd              ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_2.vhd        ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_2.vhd              ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_pkg.vhd     ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_pkg.vhd           ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_multi.vhd   ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_multi.vhd         ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_mem.vhd     ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_mem.vhd           ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_control.vhd ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_control.vhd       ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extsgn.vhd       ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extsgn.vhd             ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/breg.vhd         ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/breg.vhd               ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/alu_ctr.vhd      ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/alu_ctr.vhd            ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extusgn.vhd      ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extusgn.vhd            ;         ;
-; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extshamt.vhd     ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extshamt.vhd           ;         ;
-; altsyncram.tdf                                                                 ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                     ;         ;
-; stratix_ram_block.inc                                                          ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc              ;         ;
-; lpm_mux.inc                                                                    ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                        ;         ;
-; lpm_decode.inc                                                                 ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                     ;         ;
-; aglobal130.inc                                                                 ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                     ;         ;
-; a_rdenreg.inc                                                                  ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                      ;         ;
-; altrom.inc                                                                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                         ;         ;
-; altram.inc                                                                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                         ;         ;
-; altdpram.inc                                                                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                       ;         ;
-; altsyncram_16d1.tdf                                                            ; yes             ; Auto-Found AHDL File                   ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/db/altsyncram_16d1.tdf ;         ;
-; mips_rom.mif                                                                   ; yes             ; Auto-Found Memory Initialization File  ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_rom.mif           ;         ;
-; altsyncram_bnd1.tdf                                                            ; yes             ; Auto-Found AHDL File                   ; //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/db/altsyncram_bnd1.tdf ;         ;
-+--------------------------------------------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------+---------+
+; ulamips.vhd                      ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd                   ;         ;
+; regbuf.vhd                       ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd                    ;         ;
+; reg.vhd                          ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/reg.vhd                       ;         ;
+; mux_4.vhd                        ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd                     ;         ;
+; mux_3.vhd                        ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd                     ;         ;
+; mux_2.vhd                        ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd                     ;         ;
+; mips_pkg.vhd                     ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd                  ;         ;
+; mips_multi.vhd                   ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd                ;         ;
+; mips_mem.vhd                     ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/mips_mem.vhd                  ;         ;
+; mips_control.vhd                 ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/mips_control.vhd              ;         ;
+; extsgn.vhd                       ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/extsgn.vhd                    ;         ;
+; breg.vhd                         ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/breg.vhd                      ;         ;
+; alu_ctr.vhd                      ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/alu_ctr.vhd                   ;         ;
+; extusgn.vhd                      ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/extusgn.vhd                   ;         ;
+; extshamt.vhd                     ; yes             ; User VHDL File                         ; C:/Users/rodri/Desktop/mips-multiciclo/extshamt.vhd                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/12.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/12.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal121.inc                   ; yes             ; Megafunction                           ; c:/altera/12.1/quartus/libraries/megafunctions/aglobal121.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera/12.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/12.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/12.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/12.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_16d1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/rodri/Desktop/mips-multiciclo/db/altsyncram_16d1.tdf        ;         ;
+; mips_rom.mif                     ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/rodri/Desktop/mips-multiciclo/mips_rom.mif                  ;         ;
+; db/altsyncram_bnd1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/rodri/Desktop/mips-multiciclo/db/altsyncram_bnd1.tdf        ;         ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -249,7 +255,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                                    ; 37    ;
 ; Total memory bits                           ; 10240 ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 306   ;
 ; Total fan-out                               ; 6233  ;
 ; Average fan-out                             ; 4.06  ;
@@ -261,29 +266,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
-; |Multiciclo                               ; 1161 (66)         ; 242 (0)      ; 10240       ; 0            ; 0       ; 0         ; 37   ; 0            ; |Multiciclo                                                                             ; work         ;
-;    |alu_ctr:actr|                         ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|alu_ctr:actr                                                                ; work         ;
-;    |breg:bcoreg|                          ; 76 (76)           ; 38 (38)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg                                                                 ; work         ;
-;       |altsyncram:breg32_rtl_0|           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_0                                         ; work         ;
-;          |altsyncram_bnd1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_0|altsyncram_bnd1:auto_generated          ; work         ;
-;       |altsyncram:breg32_rtl_1|           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_1                                         ; work         ;
-;          |altsyncram_bnd1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_1|altsyncram_bnd1:auto_generated          ; work         ;
-;    |mips_control:ctr_mips|                ; 28 (28)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_control:ctr_mips                                                       ; work         ;
-;    |mips_mem:mem|                         ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_mem:mem                                                                ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_mem:mem|altsyncram:altsyncram_component                                ; work         ;
-;          |altsyncram_16d1:auto_generated| ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_mem:mem|altsyncram:altsyncram_component|altsyncram_16d1:auto_generated ; work         ;
-;    |mux_2:breg_data_mux|                  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_2:breg_data_mux                                                         ; work         ;
-;    |mux_2:mux_mem|                        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_2:mux_mem                                                               ; work         ;
-;    |mux_2:mux_reg_add|                    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_2:mux_reg_add                                                           ; work         ;
-;    |mux_2:mux_shift|                      ; 91 (91)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_2:mux_shift                                                             ; work         ;
-;    |mux_4:mux_ulaB|                       ; 52 (52)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_4:mux_ulaB                                                              ; work         ;
-;    |reg:ir|                               ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|reg:ir                                                                      ; work         ;
-;    |reg:pc|                               ; 34 (34)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|reg:pc                                                                      ; work         ;
-;    |regbuf:rdm|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:rdm                                                                  ; work         ;
-;    |regbuf:regULA|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:regULA                                                               ; work         ;
-;    |regbuf:rgA|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:rgA                                                                  ; work         ;
-;    |regbuf:rgB|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:rgB                                                                  ; work         ;
-;    |ulamips:alu|                          ; 755 (755)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|ulamips:alu                                                                 ; work         ;
+; |Multiciclo                               ; 1161 (66)         ; 242 (0)      ; 10240       ; 0            ; 0       ; 0         ; 37   ; 0            ; |Multiciclo                                                                             ;              ;
+;    |alu_ctr:actr|                         ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|alu_ctr:actr                                                                ;              ;
+;    |breg:bcoreg|                          ; 76 (76)           ; 38 (38)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg                                                                 ;              ;
+;       |altsyncram:breg32_rtl_0|           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_0                                         ;              ;
+;          |altsyncram_bnd1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_0|altsyncram_bnd1:auto_generated          ;              ;
+;       |altsyncram:breg32_rtl_1|           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_1                                         ;              ;
+;          |altsyncram_bnd1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_1|altsyncram_bnd1:auto_generated          ;              ;
+;    |mips_control:ctr_mips|                ; 28 (28)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_control:ctr_mips                                                       ;              ;
+;    |mips_mem:mem|                         ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_mem:mem                                                                ;              ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_mem:mem|altsyncram:altsyncram_component                                ;              ;
+;          |altsyncram_16d1:auto_generated| ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mips_mem:mem|altsyncram:altsyncram_component|altsyncram_16d1:auto_generated ;              ;
+;    |mux_2:breg_data_mux|                  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_2:breg_data_mux                                                         ;              ;
+;    |mux_2:mux_mem|                        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_2:mux_mem                                                               ;              ;
+;    |mux_2:mux_reg_add|                    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_2:mux_reg_add                                                           ;              ;
+;    |mux_2:mux_shift|                      ; 91 (91)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_2:mux_shift                                                             ;              ;
+;    |mux_4:mux_ulaB|                       ; 52 (52)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|mux_4:mux_ulaB                                                              ;              ;
+;    |reg:ir|                               ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|reg:ir                                                                      ;              ;
+;    |reg:pc|                               ; 34 (34)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|reg:pc                                                                      ;              ;
+;    |regbuf:rdm|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:rdm                                                                  ;              ;
+;    |regbuf:regULA|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:regULA                                                               ;              ;
+;    |regbuf:rgA|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:rgA                                                                  ;              ;
+;    |regbuf:rgB|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|regbuf:rgB                                                                  ;              ;
+;    |ulamips:alu|                          ; 755 (755)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiciclo|ulamips:alu                                                                 ;              ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1016,7 +1021,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -1025,10 +1030,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 10 15:31:35 2018
+    Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
+    Info: Processing started: Mon Dec 10 19:12:20 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multiciclo -c Multiciclo
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file ulamips.vhd
     Info (12022): Found design unit 1: ulamips-behavioral
     Info (12023): Found entity 1: ulamips
@@ -1110,9 +1115,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file byte_se
 Info (12021): Found 2 design units, including 1 entities, in source file half_word_select.vhd
     Info (12022): Found design unit 1: half_word_select-rtl
     Info (12023): Found entity 1: half_word_select
+Info (12021): Found 2 design units, including 1 entities, in source file mux_8_load.vhd
+    Info (12022): Found design unit 1: mux_8_load-rtl
+    Info (12023): Found entity 1: mux_8_load
+Info (12021): Found 2 design units, including 1 entities, in source file mux_16_load.vhd
+    Info (12022): Found design unit 1: mux_16_load-rtl
+    Info (12023): Found entity 1: mux_16_load
 Info (12021): Found 2 design units, including 1 entities, in source file mux_32.vhd
     Info (12022): Found design unit 1: mux_32-rtl
     Info (12023): Found entity 1: mux_32
+Info (12021): Found 2 design units, including 1 entities, in source file resize32_8.vhd
+    Info (12022): Found design unit 1: resize32_8-rtl
+    Info (12023): Found entity 1: resize32_8
+Info (12021): Found 2 design units, including 1 entities, in source file resize32_16.vhd
+    Info (12022): Found design unit 1: resize32_16-rtl
+    Info (12023): Found entity 1: resize32_16
 Info (12127): Elaborating entity "Multiciclo" for the top level hierarchy
 Info (12128): Elaborating entity "reg" for hierarchy "reg:pc"
 Info (12128): Elaborating entity "mux_2" for hierarchy "mux_2:mux_mem"
@@ -1134,7 +1151,7 @@ Info (12133): Instantiated megafunction "mips_mem:mem|altsyncram:altsyncram_comp
     Info (12134): Parameter "widthad_a" = "8"
     Info (12134): Parameter "width_a" = "32"
     Info (12134): Parameter "width_byteena_a" = "1"
-Warning (12125): Using design file db/altsyncram_16d1.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_16d1.tdf
     Info (12023): Found entity 1: altsyncram_16d1
 Info (12128): Elaborating entity "altsyncram_16d1" for hierarchy "mips_mem:mem|altsyncram:altsyncram_component|altsyncram_16d1:auto_generated"
 Info (12128): Elaborating entity "regbuf" for hierarchy "regbuf:rdm"
@@ -1206,10 +1223,10 @@ Info (21057): Implemented 1430 device resources after synthesis - the final reso
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 1297 logic cells
     Info (21064): Implemented 96 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 522 megabytes
-    Info: Processing ended: Mon Dec 10 15:31:44 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4693 megabytes
+    Info: Processing ended: Mon Dec 10 19:12:30 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:10
 
 
