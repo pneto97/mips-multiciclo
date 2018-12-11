@@ -167,6 +167,11 @@ mux_mem2: mux2_8bits
 decoder: decoder2_4
 		port map
 		( A => memadd_v(1 downto 0), X => byte_en_v, EN => '1');
+		
+--=======================================================================
+-- Caminho entre REG B e memoria - Trata os STORES
+--=======================================================================	
+
 
 --=======================================================================
 -- Memoria do MIPS com o byte enable
