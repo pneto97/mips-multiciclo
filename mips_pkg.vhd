@@ -116,6 +116,17 @@ package mips_pkg is
 	);
 	end component;
 	
+	component mux2_8bits is
+	generic (
+		SIZE : natural := 8
+	);
+	port (	
+		in0, in1	: in std_logic_vector(SIZE-1 downto 0);
+		sel		: in std_logic;
+		m_out		: out std_logic_vector(SIZE-1 downto 0)
+	);
+	end component;
+	
 	component mux_3 is
 	generic (
 		W_SIZE 	: natural := 32
@@ -348,7 +359,7 @@ component half_word_select is -- seletor da meia palavra para sh
 	);
 end component;
 
-component mux_32 is	-- mux que seleciona se a palavra é sw, sh ou sb
+component mux_32 is	-- mux que seleciona se a palavra Ã© sw, sh ou sb
 		port (
 	 	in0, in1, in2	: in std_logic_vector(WORD_SIZE-1 downto 0);
 		sel						: in std_logic_vector(1 downto 0);

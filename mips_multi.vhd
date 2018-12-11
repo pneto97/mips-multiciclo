@@ -62,6 +62,7 @@ signal sel_aluB_v 		: std_logic_vector(1 downto 0);	-- seleciona entrada B da ul
 signal alu_op_v			: std_logic_vector(1 downto 0);	-- codigo op ula
 signal org_pc_v			: std_logic_vector(1 downto 0);	-- selecao entrada do PC
 signal byte_en_v			: std_logic_vector(3 downto 0);	-- sinal de byte enable (0001 pega o byte 1, 0010 pega o byte 2, ...)
+signal memadd_final_v   : std_logic_vector(7 downto 0);  -- sinal que entra de endereço na memoria
 
 signal 	
 			branch_s,		-- beq ou bne
@@ -130,7 +131,7 @@ mux_mem: mux_2
 --=======================================================================
 -- mux para enderecamento da memoria 2
 --=======================================================================	
-mux_mem2: mux_2
+mux_mem2: mux2_8bits
 		port map (
 			in0 	=> memadd_v(9 downto 2), -- se for PC
 			in1 	=> memadd_v(7 downto 0), -- se for dado
