@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon Dec 10 20:14:37 2018
-Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
+Fitter Status : Successful - Mon Dec 10 21:58:28 2018
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Multiciclo
 Top-level Entity Name : Multiciclo
 Family : Cyclone II
 Device : EP2C70F896C6
 Timing Models : Final
-Total logic elements : 1,229 / 68,416 ( 2 % )
+Total logic elements : 1,218 / 68,416 ( 2 % )
     Total combinational functions : 1,168 / 68,416 ( 2 % )
     Dedicated logic registers : 242 / 68,416 ( < 1 % )
 Total registers : 242

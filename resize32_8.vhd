@@ -1,29 +1,20 @@
--- Quartus II VHDL Template
--- Basic Shift Register
-
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-entity resize32_8 is
+
+entity resize32_8 is -- resize de 8 bits para 32 bits
 	generic (
-		SIZE : natural := 32);
+		WSIZE : natural := 32);
 	port 
 	(
-		clk		: in std_logic;
-		enable	: in std_logic;
-		sr_in	   : in std_logic_vector(SIZE-1 downto 0);
-		sr_out	: out std_logic_vector(SIZE-1 downto 0)
+
+		rs_in	   : in std_logic_vector(7 downto 0);
+		rs_out	: out std_logic_vector(WSIZE-1 downto 0)
 	);
 end entity;
 
 architecture rtl of resize32_8 is
 begin
-	process (clk)
-	begin
-		if (rising_edge(clk)) then
-			if (enable = '1') then
-				sr_out <= sr_in;
-			end if;
-		end if;
-	end process;
+	rs_out <= std_logic_vector(resize(unsigned(rs_in), rs_out'length));
 end rtl;

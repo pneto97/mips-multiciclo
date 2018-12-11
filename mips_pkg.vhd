@@ -1,6 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+
 
 
 package mips_pkg is
@@ -351,6 +353,22 @@ component mux_32 is	-- mux que seleciona se a palavra é sw, sh ou sb
 	 	in0, in1, in2	: in std_logic_vector(WORD_SIZE-1 downto 0);
 		sel						: in std_logic_vector(1 downto 0);
 		m_out						: out std_logic_vector(WORD_SIZE-1 downto 0));
+end component;
+
+component resize32_8 is
+	port 
+	(
+		rs_in	   : in std_logic_vector(7 downto 0);
+		rs_out	: out std_logic_vector(WORD_SIZE-1 downto 0)
+	);
+end component;
+
+component resize32_16 is
+	port 
+	(
+		rs_in	   : in std_logic_vector(15 downto 0);
+		rs_out	: out std_logic_vector(WORD_SIZE-1 downto 0)
+	);
 end component;
 	
 --	procedure mux2x1 (signal x0, x1	: in std_logic_vector(WORD_SIZE-1 downto 0); 

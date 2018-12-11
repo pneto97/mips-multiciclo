@@ -2,26 +2,28 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\rodri\Desktop\mips-multiciclo\simulation\modelsim
+Z0 d\\vmware-host\Shared Folders\shared\projFinal\mips-multiciclo\simulation\modelsim
 Ealu_ctr
-Z1 w1544448055
-Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z3 DPx4 work 8 mips_pkg 0 22 KMoN3>nbFTd>9^4<JJJN22
-Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z6 dC:\Users\rodri\Desktop\mips-multiciclo\simulation\modelsim
-Z7 8C:/Users/rodri/Desktop/mips-multiciclo/alu_ctr.vhd
-Z8 FC:/Users/rodri/Desktop/mips-multiciclo/alu_ctr.vhd
+Z1 w1544484549
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z5 DPx4 work 8 mips_pkg 0 22 gLXXM72]Z2]@CS=aWLlZN1
+Z6 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z8 d\\vmware-host\Shared Folders\shared\projFinal\mips-multiciclo\simulation\modelsim
+Z9 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/alu_ctr.vhd
+Z10 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/alu_ctr.vhd
 l0
 L8
 Vio7hB?:gINg=K>nUZzlN20
-Z9 OV;C;10.1b;51
+Z11 OV;C;10.1d;51
 31
-Z10 !s108 1544480237.058000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/alu_ctr.vhd|
-Z12 !s107 C:/Users/rodri/Desktop/mips-multiciclo/alu_ctr.vhd|
-Z13 o-93 -work work -O0
-Z14 tExplicit 1
+Z12 !s108 1544486426.498000
+Z13 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/alu_ctr.vhd|
+Z14 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/alu_ctr.vhd|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
 !s100 GfIc`OMYIQIbe6LVa83UV3
 !i10b 1
 Abehav
@@ -29,116 +31,120 @@ R2
 R3
 R4
 R5
+R6
+R7
 DEx4 work 7 alu_ctr 0 22 io7hB?:gINg=K>nUZzlN20
 l20
 L18
 V0b2nI_]i9cgHcQMSYnik32
-R9
-31
-R10
 R11
+31
 R12
 R13
 R14
+R15
+R16
 !s100 0o3?>jJGDE?T_<oA4ZiPn2
 !i10b 1
 Ebreg
-Z15 w1544294934
-R2
-R3
-Z16 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
-Z17 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z17 w1544484434
 R4
 R5
+R2
+R3
 R6
-Z18 8C:/Users/rodri/Desktop/mips-multiciclo/breg.vhd
-Z19 FC:/Users/rodri/Desktop/mips-multiciclo/breg.vhd
+R7
+R8
+Z18 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/breg.vhd
+Z19 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/breg.vhd
 l0
 L10
 V@8`bB?R9g4L5C@Ug6HJ?73
-R9
+R11
 31
-Z20 !s108 1544480236.674000
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/breg.vhd|
-Z22 !s107 C:/Users/rodri/Desktop/mips-multiciclo/breg.vhd|
-R13
-R14
+Z20 !s108 1544486426.400000
+Z21 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/breg.vhd|
+Z22 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/breg.vhd|
+R15
+R16
 !s100 N=AK66V?fY4g4I?5egBI`3
 !i10b 1
 Artl
-R2
-R3
-R16
-R17
 R4
 R5
+R2
+R3
+R6
+R7
 DEx4 work 4 breg 0 22 @8`bB?R9g4L5C@Ug6HJ?73
 l32
 L28
 Vm[Yj[aQHEQhbgT]EYoo]?1
-R9
+R11
 31
 R20
 R21
 R22
-R13
-R14
+R15
+R16
 !s100 NWo]LTD1ZnJ4L;2Ij^7[32
 !i10b 1
 Edecoder2_4
-Z23 w1544480044
-R4
-R5
+R1
 R6
-Z24 8C:/Users/rodri/Desktop/mips-multiciclo/decoder2_4.vhd
-Z25 FC:/Users/rodri/Desktop/mips-multiciclo/decoder2_4.vhd
+R7
+R8
+Z23 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/decoder2_4.vhd
+Z24 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/decoder2_4.vhd
 l0
 L4
 VHjH`f4V3RH9[6jmogPYzi1
-R9
+R11
 31
-Z26 !s108 1544480233.908000
-Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/decoder2_4.vhd|
-Z28 !s107 C:/Users/rodri/Desktop/mips-multiciclo/decoder2_4.vhd|
-R13
-R14
+Z25 !s108 1544486425.635000
+Z26 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/decoder2_4.vhd|
+Z27 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/decoder2_4.vhd|
+R15
+R16
 !s100 ?S38DWV`zHk5mdkYFBm4a3
 !i10b 1
 Abehavioral
-R4
-R5
+R6
+R7
 DEx4 work 10 decoder2_4 0 22 HjH`f4V3RH9[6jmogPYzi1
 l11
 L10
 VU>fC6j8`:JAI;aS;9IhfP3
-R9
+R11
 31
+R25
 R26
 R27
-R28
-R13
-R14
+R15
+R16
 !s100 HK?Ree<``070Panm2i2CA3
 !i10b 1
 Eextsgn
-R15
+R17
 R2
 R3
 R4
 R5
 R6
-Z29 8C:/Users/rodri/Desktop/mips-multiciclo/extsgn.vhd
-Z30 FC:/Users/rodri/Desktop/mips-multiciclo/extsgn.vhd
+R7
+R8
+Z28 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extsgn.vhd
+Z29 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extsgn.vhd
 l0
 L6
 V1_30]<W[89M5bF?h[]^<30
-R9
+R11
 31
-Z31 !s108 1544480236.410000
-Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/extsgn.vhd|
-Z33 !s107 C:/Users/rodri/Desktop/mips-multiciclo/extsgn.vhd|
-R13
-R14
+Z30 !s108 1544486426.297000
+Z31 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extsgn.vhd|
+Z32 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extsgn.vhd|
+R15
+R16
 !s100 lSdlYLoe<L?<7AnFBaMT=3
 !i10b 1
 Awires
@@ -146,38 +152,42 @@ R2
 R3
 R4
 R5
+R6
+R7
 DEx4 work 6 extsgn 0 22 1_30]<W[89M5bF?h[]^<30
 l19
 L17
 VM32Z0P75^bg;6H>9D@UIe2
-R9
+R11
 31
+R30
 R31
 R32
-R33
-R13
-R14
+R15
+R16
 !s100 ]GZ8`Y=Tn=j7nBNC;c5_j0
 !i10b 1
 Eextshamt
-Z34 w1544404008
+R1
 R2
 R3
 R4
 R5
 R6
-Z35 8C:/Users/rodri/Desktop/mips-multiciclo/extshamt.vhd
-Z36 FC:/Users/rodri/Desktop/mips-multiciclo/extshamt.vhd
+R7
+R8
+Z33 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extshamt.vhd
+Z34 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extshamt.vhd
 l0
 L6
 V=3BG`R97]F?EEd0m70L002
-R9
+R11
 31
-Z37 !s108 1544480237.888000
-Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/extshamt.vhd|
-Z39 !s107 C:/Users/rodri/Desktop/mips-multiciclo/extshamt.vhd|
-R13
-R14
+Z35 !s108 1544486426.681000
+Z36 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extshamt.vhd|
+Z37 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extshamt.vhd|
+R15
+R16
 !s100 iV@Z4_Sz50mDMTE1O8mD>0
 !i10b 1
 Awires
@@ -185,38 +195,42 @@ R2
 R3
 R4
 R5
+R6
+R7
 DEx4 work 8 extshamt 0 22 =3BG`R97]F?EEd0m70L002
 l19
 L17
 V9IA_oIOPZHO6h==5W@Eh>3
-R9
+R11
 31
+R35
+R36
 R37
-R38
-R39
-R13
-R14
+R15
+R16
 !s100 WRO5o_XHlCHD79RKYmAHK3
 !i10b 1
 Eextusgn
-Z40 w1544402686
+R1
 R2
 R3
 R4
 R5
 R6
-Z41 8C:/Users/rodri/Desktop/mips-multiciclo/extusgn.vhd
-Z42 FC:/Users/rodri/Desktop/mips-multiciclo/extusgn.vhd
+R7
+R8
+Z38 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extusgn.vhd
+Z39 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extusgn.vhd
 l0
 L6
 Vk`0=5^O7H?zAL7ZXIZeHV0
-R9
+R11
 31
-Z43 !s108 1544480237.578000
-Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/extusgn.vhd|
-Z45 !s107 C:/Users/rodri/Desktop/mips-multiciclo/extusgn.vhd|
-R13
-R14
+Z40 !s108 1544486426.589000
+Z41 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extusgn.vhd|
+Z42 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/extusgn.vhd|
+R15
+R16
 !s100 5eW6MaG<m:];?oZ@zHjl83
 !i10b 1
 Awires
@@ -224,38 +238,42 @@ R2
 R3
 R4
 R5
+R6
+R7
 DEx4 work 7 extusgn 0 22 k`0=5^O7H?zAL7ZXIZeHV0
 l19
 L17
 VdU>^z]MhD1DAUKl]mC[XR3
-R9
+R11
 31
-R43
-R44
-R45
-R13
-R14
+R40
+R41
+R42
+R15
+R16
 !s100 ekVH>oihmaP[:`7IUZfnY3
 !i10b 1
 Emips_control
-Z46 w1544451679
+R1
 R2
 R3
 R4
 R5
 R6
-Z47 8C:/Users/rodri/Desktop/mips-multiciclo/mips_control.vhd
-Z48 FC:/Users/rodri/Desktop/mips-multiciclo/mips_control.vhd
+R7
+R8
+Z43 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_control.vhd
+Z44 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_control.vhd
 l0
 L5
 Vz^aRYBSQ@i0:l[CoDbJ^:0
-R9
+R11
 31
-Z49 !s108 1544480236.154000
-Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_control.vhd|
-Z51 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_control.vhd|
-R13
-R14
+Z45 !s108 1544486426.195000
+Z46 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_control.vhd|
+Z47 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_control.vhd|
+R15
+R16
 !s100 f<MUGD=CAEkH_f8RRY6ji3
 !i10b 1
 Acontrol_op
@@ -263,150 +281,162 @@ R2
 R3
 R4
 R5
+R6
+R7
 DEx4 work 12 mips_control 0 22 z^aRYBSQ@i0:l[CoDbJ^:0
 l46
 L29
 V8[Y4jY^_8==b_k^C4Zb`41
-R9
+R11
 31
-R49
-R50
-R51
-R13
-R14
+R45
+R46
+R47
+R15
+R16
 !s100 P?kcgVLoE3bYIgWVY``h<0
 !i10b 1
 Pmips_pkg
 R2
+R3
 R4
-R5
-Z52 w1544479884
 R6
-Z53 8C:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd
-Z54 FC:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd
+R7
+Z48 w1544485605
+R8
+Z49 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_pkg.vhd
+Z50 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_pkg.vhd
 l0
-L6
-VKMoN3>nbFTd>9^4<JJJN22
-R9
+L8
+VgLXXM72]Z2]@CS=aWLlZN1
+R11
 31
-Z55 !s108 1544480233.034000
-Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd|
-Z57 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_pkg.vhd|
-R13
-R14
-!s100 I3^Vk0i<@7kj;;18JOR_R3
+Z51 !s108 1544486425.405000
+Z52 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_pkg.vhd|
+Z53 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_pkg.vhd|
+R15
+R16
+!s100 GmiVYVR6Gl30DkC[dbhYe2
 !i10b 1
 Bbody
-R3
-R2
-R4
 R5
+R2
+R3
+R4
+R6
+R7
 l0
-L364
+L382
 VjHjkP2zVYhJ7i:?`Bf?Q80
-R9
+R11
 31
-R55
-R56
-R57
-R13
-R14
+R51
+R52
+R53
+R15
+R16
 nbody
-!s100 NGX?HnfA:K5]K9MGnZlM71
+!s100 ;dQ8E4;[9SEQ`aAioZJlD3
 !i10b 1
 Emips_ram
-Z58 w1544477553
-R4
-R5
+R1
 R6
-Z59 8C:/Users/rodri/Desktop/mips-multiciclo/mips_ram.vhd
-Z60 FC:/Users/rodri/Desktop/mips-multiciclo/mips_ram.vhd
+R7
+R8
+Z54 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_ram.vhd
+Z55 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_ram.vhd
 l0
 L42
 V6mWBlH`Q0]]QbSJPdUZZV2
-R9
+R11
 31
-Z61 !s108 1544480233.525000
-Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_ram.vhd|
-Z63 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_ram.vhd|
-R13
-R14
+Z56 !s108 1544486425.548000
+Z57 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_ram.vhd|
+Z58 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_ram.vhd|
+R15
+R16
 !s100 V2Y=3zlCkGf<>iBSH^AFK1
 !i10b 1
 Asyn
-R4
-R5
+R6
+R7
 DEx4 work 8 mips_ram 0 22 6mWBlH`Q0]]QbSJPdUZZV2
 l89
 L55
 Vzh_4oAggA^]SDYn?7ikj81
-R9
+R11
 31
-R61
-R62
-R63
-R13
-R14
+R56
+R57
+R58
+R15
+R16
 !s100 =IAjbfa6zHiH;aSP=eoYW1
 !i10b 1
 Emips_tb
-Z64 w1544398915
+R1
 R2
 R3
 R4
 R5
 R6
-Z65 8C:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd
-Z66 FC:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd
+R7
+R8
+Z59 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_tb.vhd
+Z60 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_tb.vhd
 l0
 L8
 VzX4oXTnMz67kZ_DPo@k[Q2
 !s100 LVBimERZ<2L2HVdam:gf83
-R9
+R11
 31
 !i10b 1
-Z67 !s108 1544480238.153000
-Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd|
-Z69 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd|
-R13
-R14
+Z61 !s108 1544486426.779000
+Z62 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_tb.vhd|
+Z63 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_tb.vhd|
+R15
+R16
 Atb
 R2
 R3
 R4
 R5
+R6
+R7
 DEx4 work 7 mips_tb 0 22 zX4oXTnMz67kZ_DPo@k[Q2
 l29
 L11
 VR<mMo9eHTPT`_a<>J@eST3
 !s100 Mzz[YI8IILH[ZdQGkX^?<3
-R9
+R11
 31
 !i10b 1
-R67
-R68
-R69
-R13
-R14
+R61
+R62
+R63
+R15
+R16
 Emulticiclo
-Z70 w1544479936
+R1
 R2
 R3
 R4
 R5
 R6
-Z71 8C:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd
-Z72 FC:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd
+R7
+R8
+Z64 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_multi.vhd
+Z65 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_multi.vhd
 l0
 L8
 V3b_IYIL:OQB7<[]Ke<FV;1
-R9
+R11
 31
-Z73 !s108 1544480235.803000
-Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd|
-Z75 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mips_multi.vhd|
-R13
-R14
+Z66 !s108 1544486426.101000
+Z67 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_multi.vhd|
+Z68 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mips_multi.vhd|
+R15
+R16
 !s100 @HW6gbG^z9F<]>]`Z=]gn0
 !i10b 1
 Artl
@@ -414,254 +444,266 @@ R2
 R3
 R4
 R5
+R6
+R7
 DEx4 work 10 multiciclo 0 22 3b_IYIL:OQB7<[]Ke<FV;1
 l97
 L19
 Vgi;8oKROEgNhL=1?R=0F03
-R9
+R11
 31
-R73
-R74
-R75
-R13
-R14
+R66
+R67
+R68
+R15
+R16
 !s100 FkM33@8?lRneKKk<gS8WL3
 !i10b 1
 Emux_2
-R15
-R2
+R17
 R3
-R16
-Z76 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
 R4
 R5
+R2
+Z69 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
 R6
-Z77 8C:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd
-Z78 FC:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd
+R7
+R8
+Z70 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_2.vhd
+Z71 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_2.vhd
 l0
 L6
 Vg0Io]c`bdUN4[=;LL9M6=2
-R9
+R11
 31
-Z79 !s108 1544480235.407000
-Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd|
-Z81 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mux_2.vhd|
-R13
-R14
+Z72 !s108 1544486426.002000
+Z73 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_2.vhd|
+Z74 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_2.vhd|
+R15
+R16
 !s100 9ce3kMhhE>?Ya2@7W_38>2
 !i10b 1
 Artl
-R2
 R3
-R16
-R76
 R4
 R5
+R2
+R69
+R6
+R7
 DEx4 work 5 mux_2 0 22 g0Io]c`bdUN4[=;LL9M6=2
 l16
 L15
 VeShBG@FzQc0:GjFD]2Z001
-R9
+R11
 31
-R79
-R80
-R81
-R13
-R14
+R72
+R73
+R74
+R15
+R16
 !s100 E?5jS]Sd5gQzi1UJMfSXE2
 !i10b 1
 Emux_3
-R15
-R2
+R17
 R3
-R16
-R76
 R4
 R5
+R2
+R69
 R6
-Z82 8C:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd
-Z83 FC:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd
+R7
+R8
+Z75 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_3.vhd
+Z76 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_3.vhd
 l0
 L6
 VNA_IWTgOn=MT0>d7<2TSR0
-R9
+R11
 31
-Z84 !s108 1544480235.032000
-Z85 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd|
-Z86 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mux_3.vhd|
-R13
-R14
+Z77 !s108 1544486425.902000
+Z78 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_3.vhd|
+Z79 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_3.vhd|
+R15
+R16
 !s100 ^VM<[HMnZeP=0iQkE`<XE3
 !i10b 1
 Artl
-R2
 R3
-R16
-R76
 R4
 R5
+R2
+R69
+R6
+R7
 DEx4 work 5 mux_3 0 22 NA_IWTgOn=MT0>d7<2TSR0
 l17
 L16
 VmO7Tg1be?oD<h`[VW=VbB2
-R9
+R11
 31
-R84
-R85
-R86
-R13
-R14
+R77
+R78
+R79
+R15
+R16
 !s100 dH=bL6`[B9UP2l47LRzR?2
 !i10b 1
 Emux_4
-R15
-R2
+R17
 R3
-R16
-R76
 R4
 R5
+R2
+R69
 R6
-Z87 8C:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd
-Z88 FC:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd
+R7
+R8
+Z80 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_4.vhd
+Z81 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_4.vhd
 l0
 L6
 VU^TFaTngo2GPVVYQJhzT12
-R9
+R11
 31
-Z89 !s108 1544480234.675000
-Z90 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd|
-Z91 !s107 C:/Users/rodri/Desktop/mips-multiciclo/mux_4.vhd|
-R13
-R14
+Z82 !s108 1544486425.812000
+Z83 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_4.vhd|
+Z84 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/mux_4.vhd|
+R15
+R16
 !s100 2KjE@fFJfU;hkjFm4_@^02
 !i10b 1
 Artl
-R2
 R3
-R16
-R76
 R4
 R5
+R2
+R69
+R6
+R7
 DEx4 work 5 mux_4 0 22 U^TFaTngo2GPVVYQJhzT12
 l17
 L16
 VS002UVOF6>F=DLE=l;@Y72
-R9
+R11
 31
-R89
-R90
-R91
-R13
-R14
+R82
+R83
+R84
+R15
+R16
 !s100 8SPiA@VYl8lQOMS1W[Oka1
 !i10b 1
 Ereg
-R15
-R4
-R5
+R17
 R6
-Z92 8C:/Users/rodri/Desktop/mips-multiciclo/reg.vhd
-Z93 FC:/Users/rodri/Desktop/mips-multiciclo/reg.vhd
+R7
+R8
+Z85 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/reg.vhd
+Z86 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/reg.vhd
 l0
 L7
 V=M[ABcRJOEGR;Bk2YdQ=C3
-R9
+R11
 31
-Z94 !s108 1544480232.724000
-Z95 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/reg.vhd|
-Z96 !s107 C:/Users/rodri/Desktop/mips-multiciclo/reg.vhd|
-R13
-R14
+Z87 !s108 1544486425.304000
+Z88 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/reg.vhd|
+Z89 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/reg.vhd|
+R15
+R16
 !s100 VzGUjc>85]Tl_V^;DRB]42
 !i10b 1
 Artl
-R4
-R5
+R6
+R7
 DEx4 work 3 reg 0 22 =M[ABcRJOEGR;Bk2YdQ=C3
 l25
 L21
 VGI8ZZ_bzE>hF;BINzY?G>1
-R9
+R11
 31
-R94
-R95
-R96
-R13
-R14
+R87
+R88
+R89
+R15
+R16
 !s100 m3b>>X::ZgKUNcA2PKKXY1
 !i10b 1
 Eregbuf
-R15
-R4
-R5
+R17
 R6
-Z97 8C:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd
-Z98 FC:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd
+R7
+R8
+Z90 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/regbuf.vhd
+Z91 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/regbuf.vhd
 l0
 L7
 V<YlF2G;hj=P5B33heZJQR3
-R9
+R11
 31
-Z99 !s108 1544480232.415000
-Z100 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd|
-Z101 !s107 C:/Users/rodri/Desktop/mips-multiciclo/regbuf.vhd|
-R13
-R14
+Z92 !s108 1544486425.101000
+Z93 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/regbuf.vhd|
+Z94 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/regbuf.vhd|
+R15
+R16
 !s100 4C6SegQn=jTK3[3EB`?oA1
 !i10b 1
 Artl
-R4
-R5
+R6
+R7
 DEx4 work 6 regbuf 0 22 <YlF2G;hj=P5B33heZJQR3
 l20
 L19
 V><K:O9C;i7<RGfcUOdDdW1
-R9
+R11
 31
-R99
-R100
-R101
-R13
-R14
+R92
+R93
+R94
+R15
+R16
 !s100 dU0zZFiXlE=gIaOd@PWTE1
 !i10b 1
 Eulamips
-R15
-R3
+R17
 R2
-R4
+R3
 R5
+R4
 R6
-Z102 8C:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd
-Z103 FC:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd
+R7
+R8
+Z95 8//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/ulamips.vhd
+Z96 F//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/ulamips.vhd
 l0
 L6
 VzoaDkdk7>JLIQh>98S8oV1
-R9
+R11
 31
-Z104 !s108 1544480234.245000
-Z105 !s90 -reportprogress|300|-93|-work|work|C:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd|
-Z106 !s107 C:/Users/rodri/Desktop/mips-multiciclo/ulamips.vhd|
-R13
-R14
+Z97 !s108 1544486425.717000
+Z98 !s90 -reportprogress|300|-93|-work|work|//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/ulamips.vhd|
+Z99 !s107 //vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/ulamips.vhd|
+R15
+R16
 !s100 Mg@[lNXnTbYd=b>5XT0[[1
 !i10b 1
 Abehavioral
-R3
 R2
-R4
+R3
 R5
+R4
+R6
+R7
 DEx4 work 7 ulamips 0 22 zoaDkdk7>JLIQh>98S8oV1
 l24
 L19
 V2Nojj4<BOTm<XA<gKI^]Q0
-R9
+R11
 31
-R104
-R105
-R106
-R13
-R14
+R97
+R98
+R99
+R15
+R16
 !s100 5iLkPz<][NVYgo=]YQezc0
 !i10b 1
