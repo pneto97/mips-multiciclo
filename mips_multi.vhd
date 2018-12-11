@@ -45,9 +45,13 @@ signal
 			aluA_v,			-- entrada A da ULA
 			aluB_v,			-- entrada B da ULA
 			alu_out_v,		-- saida ULA
+			PCouA_v,			-- saida do mux que decide entre o PC ou a saida A do reg
 			instruction_v,	-- saida do reg de instrucoes
 			imm32_x4_v,	   -- imediato extendido e multiplicado por 4
-			imm32_v			-- imediato extendido a 32 bits
+			imm32_v,			-- imediato extendido a 32 bits
+			imm32usng_v,	-- imediato extendido sem sinal a 32 bits
+			shamt32usng_v,	-- shamt extendido sem sinal a 32 bits
+			ext_out_v		-- o valor extendido final de acordo o sel_extensor_v
 			: std_logic_vector(WORD_SIZE-1 downto 0);
 			
 signal addsht2_v 			: std_logic_vector(WORD_SIZE-1 downto 0);
@@ -57,6 +61,8 @@ signal alu_sel_v			: std_logic_vector(3 downto 0);  -- indice registador escrito
 signal sel_aluB_v 		: std_logic_vector(1 downto 0);	-- seleciona entrada B da ula
 signal alu_op_v			: std_logic_vector(1 downto 0);	-- codigo op ula
 signal org_pc_v			: std_logic_vector(1 downto 0);	-- selecao entrada do PC
+signal byte_en_v			: std_logic_vector(3 downto 0);	-- sinal de byte enable (0001 pega o byte 1, 0010 pega o byte 2, ...)
+signal memadd_final_v   : std_logic_vector(7 downto 0);  -- sinal que entra de endereço na memoria
 
 signal 	
 			branch_s,		-- beq ou bne
@@ -71,12 +77,15 @@ signal
 			pc_wr_s,			-- escreve pc
 			reg_dst_s,		-- controle endereco reg
 			reg_wr_s,		-- escreve breg
-			sel_end_mem_s,	-- seleciona endereco memoria
 			sel_aluA_s,		-- seleciona entrada A da ula
+			sel_shamt_s,	-- seleciona o shamt ou nao para operacoes shift
+			sel_extensor_s,-- seleciona o extensor (imm sem sinal ou imm com sinal)
+			sel_end_mem_s,	-- seleciona endereco memoria
 			zero_s			-- sinal zero da ula
 			: std_logic;
 			
 
+			
 alias    func_field_v 	: std_logic_vector(5 downto 0)  is instruction_v(5 downto 0);
 alias    rs_field_v	 	: std_logic_vector(4 downto 0)  is instruction_v(25 downto 21);
 alias    rt_field_v	 	: std_logic_vector(4 downto 0)  is instruction_v(20 downto 16);
@@ -86,7 +95,27 @@ alias 	imm26_field_v  : std_logic_vector(25 downto 0) is instruction_v(25 downto
 alias 	sht_field_v		: std_logic_vector(4 downto 0)  is instruction_v(10 downto 6);
 alias    op_field_v		: std_logic_vector(5 downto 0)  is instruction_v(31 downto 26);
 
-	
+-- ======================
+-- Logica de load e store
+-- ======================
+
+-- Sinais de saida do esquematico de loads
+
+signal mux_8_load_out_v	: std_logic_vector(7 downto 0); -- Saida do mux de entradas de 8 bits do circuito de load
+signal mux_16_load_out_v : std_logic_vector(15 downto 0); -- Saída do mux de entradas de 16 bits do circ. de load
+signal resize32_8_out_v	:	std_logic_vector(31 downto 0); -- saida do resize de 8 para 32
+signal resize32_16_out_v :	std_logic_vector(31 downto 0); -- saida do resize de  16 para 32
+signal mux_32_load_out_v : std_logic_vector(31 downto 0); -- Saida do ultimo mux do esquematico do load
+
+-- Sinais de controle para tratamento de loads
+signal mux_8_load_sel_v	:	std_logic_vector(1 downto 0); 
+signal mux_16_load_sel_s	:	std_logic; 
+signal resize32_8_sel_s:	std_logic;
+signal resize32_16_sel_s:	std_logic;
+signal mux_32_load_sel_v:	std_logic_vector(1 downto 0);
+
+
+ 
 begin
 
 data 			<=  pcout_v when debug = "00" else
@@ -120,12 +149,29 @@ mux_mem: mux_2
 			sel 	=> sel_end_mem_s,
 			m_out => memadd_v
 			);
+--=======================================================================
+-- mux para enderecamento da memoria 2
+--=======================================================================	
+mux_mem2: mux2_8bits
+		port map (
+			in0 	=> memadd_v(9 downto 2), -- se for PC
+			in1 	=> memadd_v(7 downto 0), -- se for dado
+			sel 	=> sel_end_mem_s,
+			m_out => memadd_final_v
+			);
 		
 --=======================================================================
--- Memoria do MIPS
+-- Decodificacao do byte enable
+--=======================================================================	
+decoder: decoder2_4
+		port map
+		( A => memadd_v(1 downto 0), X => byte_en_v, EN => '1');
+
+--=======================================================================
+-- Memoria do MIPS com o byte enable
 --=======================================================================		
-mem:  mips_mem
-		port map (address => memadd_v(9 downto 2), data => regB_v, wren => mem_wr_s, clk => clk_rom, Q => memout_v );
+mem:  mips_ram
+		port map (address => memadd_final_v, byteena => byte_en_v, data => regB_v, wren => mem_wr_s, clock => clk_rom, Q => memout_v );
 	
 --=======================================================================
 -- RI - registrador de instruções
@@ -133,13 +179,51 @@ mem:  mips_mem
 ir:	reg
 		generic map (SIZE => 32)
 		port map (sr_in => memout_v, sr_out => instruction_v, rst => '0', clk => clk, enable => ir_wr_s );
+		
+--=======================================================================
+-- Caminho entre Memoria e reg de dados - Trata os LOADS
+--=======================================================================	
+
+
+mux8_l:	mux_8_load
+		port map(in0 => memout_v(31 downto 24),
+					in1 => memout_v(23 downto 16),
+					in2 => memout_v(15 downto 8),
+					in3 => memout_v(7 downto 0),
+					sel => mux_8_load_sel_v,
+					m_out => mux_8_load_out_v);
+
+mux16_l:	mux_16_load
+		port map(in0 => memout_v(31 downto 16),
+					in1 => memout_v(15 downto 0),
+					sel => mux_16_load_sel_s,
+					m_out => mux_16_load_out_v);	
+					
+res32_8: resize32_8
+		port map(rs_in => mux_8_load_out_v,
+					sel => resize32_8_sel_s,
+					rs_out => resize32_8_out_v);
+					
+res32_16: resize32_16
+		port map(rs_in => mux_16_load_out_v,
+					sel => resize32_16_sel_s,
+					rs_out => resize32_16_out_v);
+					
+mux32_l: mux_32
+		port map(in0 => resize32_8_out_v,
+					in1 => resize32_16_out_v,
+					in2 => memout_v,
+					sel => mux_32_load_sel_v,
+					m_out => mux_32_load_out_v);
+		
 
 --=======================================================================
 -- RDM - registrador de dados da memoria
 --=======================================================================
 rdm:	regbuf 
 		generic map (SIZE => 32)
-		port map (sr_in => memout_v, clk => clk, sr_out => rdmout_v);
+		--port map (sr_in => memout_v, clk => clk, sr_out => rdmout_v);
+		port map (sr_in => mux_32_load_out_v, clk => clk, sr_out => rdmout_v);
 	
 --=======================================================================
 -- Mux para enderecamento do registrador a ser escrito
@@ -199,6 +283,45 @@ sgnx:	extsgn
 		);
 
 --=======================================================================
+-- Modulo de extensao sem sinal: 16 para 32 bits
+--=======================================================================
+usgnx:	extusgn
+		port map (
+			input => imm16_field_v, output => imm32usng_v
+		);
+		
+--=======================================================================
+-- Modulo de extensao do shamt (sem sinal): 5 para 32 bits
+--=======================================================================
+shamtx:	extshamt
+		port map (
+			input => sht_field_v, output => shamt32usng_v
+		);
+		
+--=======================================================================
+-- Mux para selecao de qual extensor de sinal devo usar
+--=======================================================================		
+mux_extensor: mux_2
+		port map (
+			in0 	=> imm32_v, 
+			in1 	=> imm32usng_v,
+			sel 	=> sel_extensor_s,
+			m_out => ext_out_v
+		);	
+
+		
+--=======================================================================
+-- Mux para escolher o shamt ou a saida do mux de cima da ula (Pc ou A)
+--=======================================================================		
+mux_shift: mux_2
+		port map (
+			in0 	=> PCouA_v, 
+			in1 	=> shamt32usng_v,
+			sel 	=> sel_shamt_s,
+			m_out => aluA_v
+		);
+		
+--=======================================================================
 -- Mux para selecao da entrada de cima da ula
 --=======================================================================		
 mux_ulaA: mux_2
@@ -206,7 +329,7 @@ mux_ulaA: mux_2
 			in0 	=> pcout_v, 
 			in1 	=> regA_v,
 			sel 	=> sel_aluA_s,
-			m_out => aluA_v
+			m_out => PCouA_v
 		);
 		
 --=======================================================================
@@ -216,7 +339,7 @@ mux_ulaB: mux_4
 		port map (
 			in0 	=> regB_v, 
 			in1 	=> INC_PC,
-			in2	=> imm32_v,
+			in2	=> ext_out_v,
 			in3	=> imm32_x4_v,
 			sel 	=> sel_aluB_v,
 			m_out => aluB_v
@@ -229,7 +352,8 @@ actr: alu_ctr
 			port map (
 				op_alu 	=> alu_op_v,
 				funct	 	=> func_field_v,
-				alu_ctr	=> alu_sel_v
+				alu_ctr	=> alu_sel_v,
+				shift => sel_shamt_s
 			);
 
 --=======================================================================
@@ -284,7 +408,16 @@ ctr_mips: mips_control
 			s_aluAin => sel_aluA_s,
 			s_aluBin => sel_aluB_v,
 			wr_breg	=> reg_wr_s,
-			s_reg_add => reg_dst_s
+			s_reg_add => reg_dst_s,
+			s_extensor_imm => sel_extensor_s,
+			--falta o shamt?
+			
+			-- load
+			mux_8_load => mux_8_load_sel_v,
+			mux_16_load	=> mux_16_load_sel_s,
+			resize32_8 => resize32_8_sel_s,
+			resize32_16 => resize32_16_sel_s,
+			mux_32_load => mux_32_load_sel_v
 		);
 		
 end architecture;

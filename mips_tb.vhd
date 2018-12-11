@@ -14,7 +14,7 @@ signal clk 		: std_logic := '0';
 signal clk_rom : std_logic := '0';
 signal rst 		: std_logic := '1';
 signal data		: std_logic_vector(31 downto 0);
-signal debug		: std_logic_vector(1 downto 0) := "00";
+signal debug		: std_logic_vector(1 downto 0) := "01";
 
 COMPONENT Multiciclo
 port (
@@ -39,7 +39,7 @@ data => data
 
 rst 	<= '0' after 200 ps;
 
-debug	<= "01" after 1000 ps, "10" after 1800 ps;
+--debug	<= "01" after 1000 ps, "10" after 1800 ps;
 
 genclk: 	process (clk) begin
 				clk <= not clk after 100 ps;

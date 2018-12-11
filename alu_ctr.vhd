@@ -10,7 +10,8 @@ entity alu_ctr is
 	(
 		op_alu		: in std_logic_vector(1 downto 0);
 		funct			: in std_logic_vector(5 downto 0);
-		alu_ctr	   : out std_logic_vector(3 downto 0)
+		alu_ctr	   : out std_logic_vector(3 downto 0);
+		shift			: out std_logic
 	);
 end entity;
 
@@ -31,4 +32,11 @@ alu_ctr <= 	ULA_AND when (op_alu="10" and funct=iAND) else
 			ULA_SLT when (op_alu="10" and funct=iSLT) else
 			ULA_NOR when (op_alu="10" and funct=iNOR) else
 			ULA_NOP;
+			
+shift <= '1' when (op_alu="10" and funct=iSLL) else
+			'1' when (op_alu="10" and funct=iSRL) else
+			'0';
+
+
+
 end architecture;
