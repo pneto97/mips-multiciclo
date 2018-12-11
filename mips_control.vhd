@@ -105,7 +105,10 @@ logic: process (opcode, pstate)
 															 mux_32_load <= "01";
 															 
 											when iLB => resize32_8 <= '1'; -- com sinal
-											when iLBU => mux_32_load <= "00";
+															mux_32_load <= "00";
+											when iLBU => resize32_8 <= '0';
+															 mux_32_load <= "00";
+													
 											when others => null;
 										end case;
 								 
