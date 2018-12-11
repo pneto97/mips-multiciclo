@@ -10,11 +10,13 @@ entity resize32_8 is -- resize de 8 bits para 32 bits
 	(
 
 		rs_in	   : in std_logic_vector(7 downto 0);
+		sel			: in std_logic; -- 1 lb, 0 lbu
 		rs_out	: out std_logic_vector(WSIZE-1 downto 0)
 	);
 end entity;
 
 architecture rtl of resize32_8 is
 begin
-	rs_out <= std_logic_vector(resize(unsigned(rs_in), rs_out'length));
+	rs_out <= std_logic_vector(resize(unsigned(rs_in), rs_out'length)) when (sel = '0') else
+				std_logic_vector(resize(signed(rs_in), rs_out'length));
 end rtl;

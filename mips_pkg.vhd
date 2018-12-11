@@ -359,6 +359,7 @@ component resize32_8 is
 	port 
 	(
 		rs_in	   : in std_logic_vector(7 downto 0);
+		sel		: in std_logic;
 		rs_out	: out std_logic_vector(WORD_SIZE-1 downto 0)
 	);
 end component;
@@ -367,6 +368,7 @@ component resize32_16 is
 	port 
 	(
 		rs_in	   : in std_logic_vector(15 downto 0);
+		sel		: in std_logic;
 		rs_out	: out std_logic_vector(WORD_SIZE-1 downto 0)
 	);
 end component;
