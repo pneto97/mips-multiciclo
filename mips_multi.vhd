@@ -127,6 +127,16 @@ mux_mem: mux_2
 			sel 	=> sel_end_mem_s,
 			m_out => memadd_v
 			);
+--=======================================================================
+-- mux para enderecamento da memoria 2
+--=======================================================================	
+mux_mem2: mux_2
+		port map (
+			in0 	=> memadd_v(9 downto 2), -- se for PC
+			in1 	=> memadd_v(7 downto 0), -- se for dado
+			sel 	=> sel_end_mem_s,
+			m_out => memadd_final_v
+			);
 		
 --=======================================================================
 -- Decodificacao do byte enable
@@ -139,7 +149,7 @@ decoder: decoder2_4
 -- Memoria do MIPS com o byte enable
 --=======================================================================		
 mem:  mips_ram
-		port map (address => memadd_v(9 downto 2), byteena => byte_en_v, data => regB_v, wren => mem_wr_s, clock => clk_rom, Q => memout_v );
+		port map (address => memadd_final_v, byteena => byte_en_v, data => regB_v, wren => mem_wr_s, clock => clk_rom, Q => memout_v );
 	
 --=======================================================================
 -- RI - registrador de instruções
