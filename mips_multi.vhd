@@ -4,6 +4,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use work.mips_pkg.all;
+use IEEE.numeric_std.all;
 
 entity Multiciclo is
 	port 
@@ -190,13 +191,16 @@ mux8_l:	mux_8_load
 					in1 => memout_v(23 downto 16),
 					in2 => memout_v(15 downto 8),
 					in3 => memout_v(7 downto 0),
-					sel => mux_8_load_sel_v,
+					--sel => mux_8_load_sel_v,
+					sel => memadd_v(1 downto 0), -- pega offset do byte
 					m_out => mux_8_load_out_v);
+
 
 mux16_l:	mux_16_load
 		port map(in0 => memout_v(31 downto 16),
 					in1 => memout_v(15 downto 0),
-					sel => mux_16_load_sel_s,
+					--sel => mux_16_load_sel_s,
+					sel => memadd_v(1), -- pega offset do half word
 					m_out => mux_16_load_out_v);	
 					
 res32_8: resize32_8
@@ -410,11 +414,10 @@ ctr_mips: mips_control
 			wr_breg	=> reg_wr_s,
 			s_reg_add => reg_dst_s,
 			s_extensor_imm => sel_extensor_s,
-			--falta o shamt?
 			
 			-- load
-			mux_8_load => mux_8_load_sel_v,
-			mux_16_load	=> mux_16_load_sel_s,
+--			mux_8_load => mux_8_load_sel_v,
+--			mux_16_load	=> mux_16_load_sel_s,
 			resize32_8 => resize32_8_sel_s,
 			resize32_16 => resize32_16_sel_s,
 			mux_32_load => mux_32_load_sel_v

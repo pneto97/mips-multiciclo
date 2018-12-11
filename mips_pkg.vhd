@@ -231,8 +231,8 @@ package mips_pkg is
 		s_extensor_imm: OUT std_logic; -- novo sinal para extender com ou sem sinal
 		
 		 -- sinais de load
-		mux_8_load: OUT std_logic_vector(1 downto 0);
-		mux_16_load	: OUT std_logic; 
+--		mux_8_load: OUT std_logic_vector(1 downto 0);
+--		mux_16_load	: OUT std_logic; 
 		resize32_8: OUT std_logic;
 		resize32_16: OUT std_logic;
 		mux_32_load: OUT std_logic_vector(1 downto 0)

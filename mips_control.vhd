@@ -22,9 +22,10 @@ ENTITY mips_control IS
 		wr_breg	: OUT std_logic;
 		s_reg_add: OUT std_logic;
 		s_extensor_imm : OUT std_logic; -- Novo sinal para controlar o mux que faz extensão de sinal (0 com sinal, 1 sem sinal)
-		 -- sinais de load
-		mux_8_load: OUT std_logic_vector(1 downto 0);
-		mux_16_load	: OUT std_logic; 
+		
+		-- sinais de load
+--		mux_8_load: OUT std_logic_vector(1 downto 0);
+--		mux_16_load	: OUT std_logic; 
 		resize32_8: OUT std_logic;
 		resize32_16: OUT std_logic;
 		mux_32_load: OUT std_logic_vector(1 downto 0)
@@ -88,7 +89,11 @@ logic: process (opcode, pstate)
 			when c_mem_add_st => s_aluAin <= '1';
 										s_aluBin <= "10";
 									
-			when readmem_st 	=> s_mem_add <= '1';
+			when readmem_st 	=> s_mem_add <= '1'; --controla tipo load por aqui
+								--		case opcode is -- iLW | iLH | iLHU | iLB | iLBU
+								--			when iLW =>;
+								--			when others => null;
+								--		end case;
 								 
 			when ldreg_st 		=>	s_datareg <= '1';
 										wr_breg	  <= '1';
