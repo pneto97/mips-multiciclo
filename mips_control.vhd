@@ -78,6 +78,10 @@ logic: process (opcode, pstate)
 		s_aluBin  	<= "00";
 		s_reg_add 	<= '0';
 		s_extensor_imm <= '0'; -- Novo sinal que escolhe se vai extender com sinal (0) ou sem sinal (1)
+		-- controles para o load
+		resize32_8 <= '0';
+		resize32_16 <= '0';
+		mux_32_load <= "00";
 		
 		case pstate is 
 			when fetch_st 		=> wr_pc 	<= '1';
@@ -89,11 +93,21 @@ logic: process (opcode, pstate)
 			when c_mem_add_st => s_aluAin <= '1';
 										s_aluBin <= "10";
 									
+
 			when readmem_st 	=> s_mem_add <= '1'; --controla tipo load por aqui
-								--		case opcode is -- iLW | iLH | iLHU | iLB | iLBU
-								--			when iLW =>;
-								--			when others => null;
-								--		end case;
+										case opcode is -- iLW | iLH | iLHU | iLB | iLBU
+											when iLW => mux_32_load <= "10"; -- palavra inalterada
+											
+											when iLH => resize32_16 <= '1'; -- com sinal
+															mux_32_load <= "01";
+															
+											when iLHU => resize32_16 <= '0'; -- sem sinal
+															 mux_32_load <= "01";
+															 
+											when iLB => resize32_8 <= '1'; -- com sinal
+											when iLBU => mux_32_load <= "00";
+											when others => null;
+										end case;
 								 
 			when ldreg_st 		=>	s_datareg <= '1';
 										wr_breg	  <= '1';
