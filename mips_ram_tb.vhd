@@ -40,9 +40,55 @@ wren => wren,
 q => q
 );
 
-address 	<= "00000000" after 30 ps, "00000011" after 60 ps, "00001011" after 90 ps; 
-byteena  <= "0001" after 30 ps, "1100" after 60 ps, "1111" after 90 ps; 
-data     <= X"1234ABCD" after 30 ps, X"FFDDCCBB" after 60 ps, X"12345678" after 90 ps;
+
+init : PROCESS         
+begin
+-- le addr 0
+address <= "00000000";
+byteena <= "1111";
+wren <= '0';
+
+wait for 30 ps;
+
+-- le addr 1
+address <= "00000001";
+byteena <= "1111";
+wren <= '0';
+wait for 30 ps;
+
+--le addr 2
+address <= "00000010";
+byteena <= "1111";
+wren <= '0';
+
+wait for 30 ps;
+
+--escreve no addr 2
+address <= "00000010";
+byteena <= "0001";
+data     <= X"1234ABCD";
+wren <= '1';
+wait for 30 ps;
+
+--escreve no addr 1
+address <= "00000001";
+byteena <= "1100";
+data     <= X"12340000";
+wren <= '1';
+wait for 30 ps;
+
+--escreve no addr 4
+address <= "00000100";
+byteena <= "1100";
+data     <= X"AAAA0100";
+wren <= '1';
+wait for 30 ps;
+
+--address 	<= "00000000" after 30 ps, "00000001" after 60 ps, "00000010" after 90 ps; 
+--byteena  <= "0001" after 30 ps, "1100" after 60 ps, "1110" after 90 ps; 
+--data     <= X"1234ABCD" after 30 ps, X"FFDDCCBB" after 60 ps, X"12345678" after 90 ps;
+
+END PROCESS init; 
 
 
 genclk: 	process (clock) begin

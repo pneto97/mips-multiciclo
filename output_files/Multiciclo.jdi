@@ -1,9 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="00000000000000000000"/>
+    <hash md5_digest_80b="af9551202fe5ed281986"/>
   </project>
   <file_info>
-    <file checksum="0x007215AD" device="EP2C70F896C6" path="Multiciclo.sof" usercode="0x007215AD"/>
-    <file checksum="0x1863F50F" device="EPCS16" path="Multiciclo.pof" usercode="0x00000000"/>
+    <file device="EP2C70F896C6" path="//vmware-host/Shared Folders/shared/projFinal/mips-multiciclo/output_files/Multiciclo.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>

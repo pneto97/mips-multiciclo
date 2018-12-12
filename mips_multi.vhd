@@ -123,6 +123,8 @@ signal mem_in: std_logic_vector(31 downto 0); -- O sinal que vai entrar na memor
  
 -- Sinais de controle para tratamento de stores
 signal store_sel: 	std_logic_vector(1 downto 0); 
+
+
 begin
 
 data 			<=  pcout_v when debug = "00" else

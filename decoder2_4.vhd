@@ -48,8 +48,10 @@ begin
             when "0001" => X <= "0010"; -- sb, segundo byte
             when "0010" => X <= "0100"; -- sb, terceiro byte
             when "0011" => X <= "1000"; -- sb, quarto byte
-				when "010-" => X <= "0011"; -- sh, primeira meia palavra
-            when "011-" => X <= "1100"; -- sh, segunda meia palavra 
+				when "0100" => X <= "0011"; -- sh, primeira meia palavra
+				when "0101" => X <= "0011"; -- sh, primeira meia palavra
+            when "0110" => X <= "1100"; -- sh, segunda meia palavra 
+				 when "0111" => X <= "1100"; -- sh, segunda meia palavra 
             when others => X <= "1111"; -- sw, palavra inteira
 		end case;
     end if;
