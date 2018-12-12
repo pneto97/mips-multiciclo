@@ -1,5 +1,5 @@
 Flow report for Multiciclo
-Wed Dec 12 16:19:10 2018
+Wed Dec 12 18:08:53 2018
 Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +------------------------------------+------------------------------------------+
-; Flow Status                        ; Successful - Wed Dec 12 16:19:10 2018    ;
+; Flow Status                        ; Successful - Wed Dec 12 18:08:53 2018    ;
 ; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; Multiciclo                               ;
 ; Top-level Entity Name              ; Multiciclo                               ;
 ; Family                             ; Cyclone II                               ;
 ; Device                             ; EP2C70F896C6                             ;
 ; Timing Models                      ; Final                                    ;
-; Total logic elements               ; 1,301 / 68,416 ( 2 % )                   ;
-;     Total combinational functions  ; 1,260 / 68,416 ( 2 % )                   ;
-;     Dedicated logic registers      ; 226 / 68,416 ( < 1 % )                   ;
-; Total registers                    ; 226                                      ;
+; Total logic elements               ; 1,318 / 68,416 ( 2 % )                   ;
+;     Total combinational functions  ; 1,279 / 68,416 ( 2 % )                   ;
+;     Dedicated logic registers      ; 241 / 68,416 ( < 1 % )                   ;
+; Total registers                    ; 241                                      ;
 ; Total pins                         ; 37 / 622 ( 6 % )                         ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 10,240 / 1,152,000 ( < 1 % )             ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/12/2018 16:18:34 ;
+; Start date & time ; 12/12/2018 18:08:17 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Multiciclo          ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 277375815774505.154463871433736       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 277375815774505.154464529761540       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i1                                    ; --            ; --          ; tb             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i2                                    ; --            ; --          ; tb_ram         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i3                                    ; --            ; --          ; byte_select_tb ;
@@ -112,12 +112,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 4694 MB             ; 00:00:08                           ;
-; Fitter                    ; 00:00:16     ; 2.5                     ; 4981 MB             ; 00:00:23                           ;
+; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 4701 MB             ; 00:00:07                           ;
+; Fitter                    ; 00:00:17     ; 2.7                     ; 5018 MB             ; 00:00:24                           ;
 ; Assembler                 ; 00:00:04     ; 1.0                     ; 4611 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4704 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4693 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4571 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:37                           ;
+; Total                     ; 00:00:32     ; --                      ; --                  ; 00:00:37                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

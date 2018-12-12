@@ -28,7 +28,6 @@ vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/half_word_select.vhd
 vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/mux_8_load.vhd}
 vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/mux_16_load.vhd}
 vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/mux_32.vhd}
-vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/mux2_8bits.vhd}
 
 vcom -93 -work work {C:/Users/rodri/Desktop/mips-multiciclo/mips_tb.vhd}
 

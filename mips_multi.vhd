@@ -160,14 +160,14 @@ mux_mem: mux_2
 --=======================================================================
 -- mux para escolha do address da memoria ram 
 --=======================================================================	
-mux_mem2: mux2_8bits
-		port map (
-			in0 	=> memadd_v(7 downto 0), -- se for PC
-			in1 	=> memadd_v(9 downto 2), -- se for dado
-			sel 	=> sel_end_mem_s,
-			m_out => memadd_final_v
-			);
-		
+--mux_mem2: mux2_8bits
+--		port map (
+--			in0 	=> memadd_v(9 downto 2), -- se for PC
+--			in1 	=> memadd_v(9 downto 2), -- se for dado
+--			sel 	=> sel_end_mem_s,
+--			m_out => memadd_final_v
+--			);
+--		
 --=======================================================================
 -- Decodificacao do byte enable
 --=======================================================================	
@@ -206,7 +206,7 @@ mux32_s: mux_32
 -- Memoria do MIPS com o byte enable
 --=======================================================================		
 mem:  mips_ram
-		port map (address => memadd_final_v, byteena => byte_en_v, data => mem_in, wren => mem_wr_s, clock => clk_rom, Q => memout_v );
+		port map (address => memadd_v(9 downto 2), byteena => byte_en_v, data => mem_in, wren => mem_wr_s, clock => clk_rom, Q => memout_v );
 	
 --=======================================================================
 -- RI - registrador de instruções
@@ -221,18 +221,18 @@ ir:	reg
 
 
 mux8_l:	mux_8_load
-		port map(in0 => memout_v(31 downto 24),
-					in1 => memout_v(23 downto 16),
-					in2 => memout_v(15 downto 8),
-					in3 => memout_v(7 downto 0),
+		port map(in0 => memout_v(7 downto 0),
+					in1 => memout_v(15 downto 8),
+					in2 => memout_v(23 downto 16),
+					in3 => memout_v(31 downto 24),
 					--sel => mux_8_load_sel_v,
 					sel => memadd_v(1 downto 0), -- pega offset do byte
 					m_out => mux_8_load_out_v);
 
 
 mux16_l:	mux_16_load
-		port map(in0 => memout_v(31 downto 16),
-					in1 => memout_v(15 downto 0),
+		port map(in0 => memout_v(15 downto 0),
+					in1 => memout_v(31 downto 16),
 					--sel => mux_16_load_sel_s,
 					sel => memadd_v(1), -- pega offset do half word
 					m_out => mux_16_load_out_v);	

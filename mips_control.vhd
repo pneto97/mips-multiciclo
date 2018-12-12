@@ -94,8 +94,8 @@ logic: process (opcode, pstate)
 			when c_mem_add_st => s_aluAin <= '1'; -- Ula A recebe o dado A
 										s_aluBin <= "10"; -- Ula B recebe o imediato 
 										case opcode is -- iADDI | iORI | iANDI
-											when iADDI => 
-												op_alu <= "000"; -- ADDI
+											when iADDI | iLW | iLH | iLHU | iLB | iLBU | iSW | iSH | iSB => 
+												op_alu <= "000"; -- Soma do addi ou do endereço de memoria
 												s_extensor_imm <= '0'; -- Com sinal 
 											when iORI => 
 												op_alu <= "101"; -- ORI
@@ -103,7 +103,7 @@ logic: process (opcode, pstate)
 															
 											when iANDI  => 
 												op_alu <= "100"; -- ANDI
-												s_extensor_imm <= '1'; -- Sem sinal 			 
+												s_extensor_imm <= '1'; -- Sem sinal
 													
 											when others => null;
 										end case;
