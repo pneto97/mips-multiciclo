@@ -27,9 +27,16 @@ end entity;
 
 architecture rtl of breg is
 
-signal breg32: word_array(31 downto 0);
+signal breg32: word_array(31 downto 0) := (others=>(others=>'0'));
+--variable  I : natural := 0;
+--for I in 0 to 31 loop
+--			breg32(I) <= X"00000000";
+--	end loop;
 
 begin
+
+	
+	
 	regA <= ZERO32 when (idxA="00000") else breg32(conv_integer(idxA));
 	regB <= ZERO32 when (idxB="00000") else breg32(conv_integer(idxB));
 	process (clk)

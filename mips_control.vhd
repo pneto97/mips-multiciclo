@@ -110,7 +110,8 @@ logic: process (opcode, pstate)
 										
 									
 
-			when readmem_st 	=> s_mem_add <= '1'; --controla tipo load por aqui
+			when readmem_st 	=> 
+										s_mem_add <= '1'; --controla tipo load por aqui
 										store_sel_ctr <= "10"; -- Este sinal irá fazer com que o byteena seja "1111"
 										case opcode is -- iLW | iLH | iLHU | iLB | iLBU
 											when iLW => mux_32_load <= "10"; -- palavra inalterada
@@ -132,6 +133,7 @@ logic: process (opcode, pstate)
 								 
 			when ldreg_st 		=>	s_datareg <= '1';
 										wr_breg	  <= '1';
+										s_reg_add <= '0';
 								
 			when writemem_st 	=> wr_mem 	 <= '1';
 										s_mem_add <= '1';
