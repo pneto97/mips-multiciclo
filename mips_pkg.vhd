@@ -202,7 +202,7 @@ package mips_pkg is
 	
 	component alu_ctr is
 	port (
-		op_alu		: in std_logic_vector(1 downto 0);
+		op_alu		: in std_logic_vector(2 downto 0);
 		funct			: in std_logic_vector(5 downto 0);
 		alu_ctr	   : out std_logic_vector(3 downto 0);
 		shift			: out  std_logic
@@ -221,7 +221,7 @@ package mips_pkg is
 		is_beq	: OUT std_logic;
 		is_bne	: OUT std_logic;
 		s_datareg: OUT std_logic;
-		op_alu	: OUT std_logic_vector (1 DOWNTO 0);
+		op_alu	: OUT std_logic_vector (2 DOWNTO 0);
 		s_mem_add: OUT std_logic;
 		s_PCin	: OUT std_logic_vector (1 DOWNTO 0);
 		s_aluAin : OUT std_logic;
@@ -235,7 +235,9 @@ package mips_pkg is
 --		mux_16_load	: OUT std_logic; 
 		resize32_8: OUT std_logic;
 		resize32_16: OUT std_logic;
-		mux_32_load: OUT std_logic_vector(1 downto 0)
+		mux_32_load: OUT std_logic_vector(1 downto 0);
+		-- Sinais de store
+		store_sel_ctr: OUT std_logic_vector(1 downto 0)
 	);
 	END component;
 	
@@ -341,6 +343,7 @@ component decoder2_4 is --seletor de byte para sb
 	port 
 	(			
 			A  : in  STD_LOGIC_VECTOR (1 downto 0);  -- 2-bit input
+			B  : in  STD_LOGIC_VECTOR (1 downto 0);  -- 2-bit input
 			X  : out STD_LOGIC_VECTOR (3 downto 0);  -- 4-bit output
 			EN : in  STD_LOGIC  -- enable input
 	);
@@ -349,7 +352,7 @@ end component;
 component byte_select is --seletor de byte para sb
 	port 
 	(
-		w_in	   : in std_logic_vector(WORD_SIZE-1 downto 0); --Palavra de entrada
+		w_in	   : in std_logic_vector(7 downto 0); --Byte de entrada
 		sel		: in std_logic_vector(1 downto 0); --seleciona a posicao do offset
 		w_out	: out std_logic_vector(WORD_SIZE-1 downto 0) -- Palavra de saida com os zeros
 		
@@ -359,7 +362,7 @@ end component;
 component half_word_select is -- seletor da meia palavra para sh
 	port 
 	(
-		w_in	   : in std_logic_vector(WORD_SIZE-1 downto 0); --Palavra de entrada
+		w_in	   : in std_logic_vector(15 downto 0); -- HalfPalavra de entrada
 		sel		: in std_logic; --seleciona a posicao do offset
 		w_out	: out std_logic_vector(WORD_SIZE-1 downto 0) -- Palavra de saida com os zeros
 		

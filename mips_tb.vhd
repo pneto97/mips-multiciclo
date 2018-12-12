@@ -14,7 +14,7 @@ signal clk 		: std_logic := '0';
 signal clk_rom : std_logic := '0';
 signal rst 		: std_logic := '1';
 signal data		: std_logic_vector(31 downto 0);
-signal debug		: std_logic_vector(1 downto 0) := "01";
+signal debug		: std_logic_vector(1 downto 0) := "11";
 
 COMPONENT Multiciclo
 port (

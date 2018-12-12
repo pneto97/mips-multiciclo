@@ -60,7 +60,7 @@ signal rset_s, clock_s 	: std_logic;
 signal iwreg_v 			: std_logic_vector(4 downto 0);  -- indice registador escrito
 signal alu_sel_v			: std_logic_vector(3 downto 0);  -- indice registador escrito
 signal sel_aluB_v 		: std_logic_vector(1 downto 0);	-- seleciona entrada B da ula
-signal alu_op_v			: std_logic_vector(1 downto 0);	-- codigo op ula
+signal alu_op_v			: std_logic_vector(2 downto 0);	-- codigo op ula
 signal org_pc_v			: std_logic_vector(1 downto 0);	-- selecao entrada do PC
 signal byte_en_v			: std_logic_vector(3 downto 0);	-- sinal de byte enable (0001 pega o byte 1, 0010 pega o byte 2, ...)
 signal memadd_final_v   : std_logic_vector(7 downto 0);  -- sinal que entra de endereço na memoria
@@ -100,6 +100,7 @@ alias    op_field_v		: std_logic_vector(5 downto 0)  is instruction_v(31 downto 
 -- Logica de load e store
 -- ======================
 
+
 -- Sinais de saida do esquematico de loads
 
 signal mux_8_load_out_v	: std_logic_vector(7 downto 0); -- Saida do mux de entradas de 8 bits do circuito de load
@@ -115,8 +116,13 @@ signal resize32_8_sel_s:	std_logic;
 signal resize32_16_sel_s:	std_logic;
 signal mux_32_load_sel_v:	std_logic_vector(1 downto 0);
 
-
+-- Sinais de saida para tratamento de store
+signal byte_out_v:	std_logic_vector(31 downto 0); 
+signal half_word_out_v: std_logic_vector(31 downto 0);
+signal mem_in: std_logic_vector(31 downto 0); -- O sinal que vai entrar na memoria ram 
  
+-- Sinais de controle para tratamento de stores
+signal store_sel: 	std_logic_vector(1 downto 0); 
 begin
 
 data 			<=  pcout_v when debug = "00" else
@@ -130,9 +136,8 @@ pc_wr_s 		<= jump_s or (zero_s and is_beq_s) or ((not zero_s) and is_bne_s);
 
 imm32_x4_v 	<= imm32_v(29 downto 0) & "00";
 
-datadd_v		<= X"000000" & '1' & alu_out_v(8 downto 2);
-
-
+--datadd_v		<= X"000000" & '1' & rulA_out_v(8 downto 2);
+datadd_v		<= X"00000" & "001" & rulA_out_v(8 downto 0);
 --=======================================================================
 -- PC - Contador de programa
 --=======================================================================
@@ -156,7 +161,7 @@ mux_mem: mux_2
 mux_mem2: mux2_8bits
 		port map (
 			in0 	=> memadd_v(9 downto 2), -- se for PC
-			in1 	=> memadd_v(7 downto 0), -- se for dado
+			in1 	=> memadd_v(9 downto 2), -- se for dado
 			sel 	=> sel_end_mem_s,
 			m_out => memadd_final_v
 			);
@@ -166,18 +171,40 @@ mux_mem2: mux2_8bits
 --=======================================================================	
 decoder: decoder2_4
 		port map
-		( A => memadd_v(1 downto 0), X => byte_en_v, EN => '1');
+		( B => memadd_v(1 downto 0),A => store_sel, X => byte_en_v, EN => '1');
 		
 --=======================================================================
 -- Caminho entre REG B e memoria - Trata os STORES
 --=======================================================================	
 
+byte_selector: byte_select
+		port map
+		(
+		w_in	=> regB_v(7 downto 0),
+		sel	=> memadd_v(1 downto 0),	
+		w_out	=> byte_out_v
+		);
+		
+half_word_selector: half_word_select
+		port map
+		(
+		w_in	=> regB_v(15 downto 0),
+		sel	=> memadd_v(1),	
+		w_out	=> half_word_out_v
+		);
 
+mux32_s: mux_32
+		port map(in0 => byte_out_v,
+					in1 => half_word_out_v,
+					in2 => regB_v,
+					sel => store_sel,
+					m_out => mem_in);
+		
 --=======================================================================
 -- Memoria do MIPS com o byte enable
 --=======================================================================		
 mem:  mips_ram
-		port map (address => memadd_final_v, byteena => byte_en_v, data => regB_v, wren => mem_wr_s, clock => clk_rom, Q => memout_v );
+		port map (address => memadd_final_v, byteena => byte_en_v, data => mem_in, wren => mem_wr_s, clock => clk_rom, Q => memout_v );
 	
 --=======================================================================
 -- RI - registrador de instruções
@@ -425,7 +452,11 @@ ctr_mips: mips_control
 --			mux_16_load	=> mux_16_load_sel_s,
 			resize32_8 => resize32_8_sel_s,
 			resize32_16 => resize32_16_sel_s,
-			mux_32_load => mux_32_load_sel_v
+			mux_32_load => mux_32_load_sel_v,
+			-- Store
+			store_sel_ctr => store_sel
+
+			
 		);
 		
 end architecture;
