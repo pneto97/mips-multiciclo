@@ -28,9 +28,9 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity decoder2_4 is
-    Port ( 	A  : in  STD_LOGIC_VECTOR (1 downto 0);  -- 2-bit input
-				B  : in  STD_LOGIC_VECTOR (1 downto 0);  -- 2-bit input
-				X  : out STD_LOGIC_VECTOR (3 downto 0);  -- 4-bit output
+    Port ( 	A  : in  STD_LOGIC_VECTOR (1 downto 0);  -- Qual tipo de store: 00 => sb, 01 => sh, 10 => sw
+				B  : in  STD_LOGIC_VECTOR (1 downto 0);  -- Os bits a1a0 que dizem qual byte ou half word queremos
+				X  : out STD_LOGIC_VECTOR (3 downto 0);  -- Byte enable decodificado para 4 bits
 				EN : in  STD_LOGIC);                     -- enable input
 end decoder2_4;
 
@@ -44,13 +44,13 @@ begin
     X <= "1111";        -- default output value
     if (EN = '1') then  -- active high enable pin
 		case selec is
-            when "0000" => X <= "0001";
-            when "0001" => X <= "0010";
-            when "0010" => X <= "0100";
-            when "0011" => X <= "1000";
-				when "0100" => X <= "0011";
-            when "0110" => X <= "1100";
-            when others => X <= "1111";
+            when "0000" => X <= "0001"; -- sb, primeiro byte
+            when "0001" => X <= "0010"; -- sb, segundo byte
+            when "0010" => X <= "0100"; -- sb, terceiro byte
+            when "0011" => X <= "1000"; -- sb, quarto byte
+				when "010-" => X <= "0011"; -- sh, primeira meia palavra
+            when "011-" => X <= "1100"; -- sh, segunda meia palavra 
+            when others => X <= "1111"; -- sw, palavra inteira
 		end case;
     end if;
 end process;

@@ -156,11 +156,11 @@ mux_mem: mux_2
 			m_out => memadd_v
 			);
 --=======================================================================
--- mux para enderecamento da memoria 2
+-- mux para escolha do address da memoria ram 
 --=======================================================================	
 mux_mem2: mux2_8bits
 		port map (
-			in0 	=> memadd_v(9 downto 2), -- se for PC
+			in0 	=> memadd_v(7 downto 0), -- se for PC
 			in1 	=> memadd_v(9 downto 2), -- se for dado
 			sel 	=> sel_end_mem_s,
 			m_out => memadd_final_v
@@ -171,7 +171,7 @@ mux_mem2: mux2_8bits
 --=======================================================================	
 decoder: decoder2_4
 		port map
-		( B => memadd_v(1 downto 0),A => store_sel, X => byte_en_v, EN => '1');
+		( A => store_sel, B => memadd_v(1 downto 0), X => byte_en_v, EN => '1');
 		
 --=======================================================================
 -- Caminho entre REG B e memoria - Trata os STORES

@@ -22,7 +22,7 @@ ENTITY mips_control IS
 		wr_breg	: OUT std_logic;
 		s_reg_add: OUT std_logic;
 		s_extensor_imm : OUT std_logic; -- Novo sinal para controlar o mux que faz extensão de sinal (0 com sinal, 1 sem sinal)
-		store_sel_ctr: OUT std_logic_vector (1 DOWNTO 0); -- Novo sinal para controlar o mux que escolhe qual store será feito
+		store_sel_ctr: OUT std_logic_vector (1 DOWNTO 0); -- Novo sinal para controlar o mux que escolhe qual store será feito 00
 		
 		-- sinais de load
 --		mux_8_load: OUT std_logic_vector(1 downto 0);
@@ -91,17 +91,17 @@ logic: process (opcode, pstate)
 								
 			when decode_st 	=>	s_aluBin <= "11";
 								
-			when c_mem_add_st => s_aluAin <= '1';
-										s_aluBin <= "10";
+			when c_mem_add_st => s_aluAin <= '1'; -- Ula A recebe o dado A
+										s_aluBin <= "10"; -- Ula B recebe o imediato 
 										case opcode is -- iADDI | iORI | iANDI
 											when iADDI => 
 												op_alu <= "000"; -- ADDI
 												s_extensor_imm <= '0'; -- Com sinal 
-											when iORI =>  store_sel_ctr <= "01"; -- half word
+											when iORI => 
 												op_alu <= "101"; -- ORI
 												s_extensor_imm <= '1'; -- Sem sinal 
 															
-											when iANDI  => store_sel_ctr <= "00"; -- byte
+											when iANDI  => 
 												op_alu <= "100"; -- ANDI
 												s_extensor_imm <= '1'; -- Sem sinal 			 
 													
