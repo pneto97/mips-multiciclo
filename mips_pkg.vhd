@@ -1,6 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+
 
 
 package mips_pkg is
@@ -18,9 +20,16 @@ package mips_pkg is
 	-- Instrucoes do MIPs
 	constant iRTYPE		: std_logic_vector(5 downto 0) := "000000";
 	constant iLW			: std_logic_vector(5 downto 0) := "100011";
+	constant iLB			: std_logic_vector(5 downto 0) := "100000"; -- adicionei essa
+	constant iLBU			: std_logic_vector(5 downto 0) := "100100"; -- adicionei essa
+	constant iLH			: std_logic_vector(5 downto 0) := "100001"; -- adicionei essa
+	constant iLHU			: std_logic_vector(5 downto 0) := "100101"; -- adicionei essa
 	constant iSW			: std_logic_vector(5 downto 0) := "101011";
+	constant iSB			: std_logic_vector(5 downto 0) := "101000"; -- adicionei essa
+	constant iSH			: std_logic_vector(5 downto 0) := "101001"; -- adicionei essa
 	constant iADDI			: std_logic_vector(5 downto 0) := "001000";
-	constant iORI			: std_logic_vector(5 downto 0) := "001101";
+	constant iORI			: std_logic_vector(5 downto 0) := "001101"; -- adicionei essa
+	constant iANDI			: std_logic_vector(5 downto 0) := "001100"; -- adicionei essa
 	constant iJ				: std_logic_vector(5 downto 0) := "000010";
 	constant iBEQ			: std_logic_vector(5 downto 0) := "000100";
 	constant iBNE			: std_logic_vector(5 downto 0) := "000101";
@@ -107,6 +116,17 @@ package mips_pkg is
 	);
 	end component;
 	
+	component mux2_8bits is
+	generic (
+		SIZE : natural := 8
+	);
+	port (	
+		in0, in1	: in std_logic_vector(SIZE-1 downto 0);
+		sel		: in std_logic;
+		m_out		: out std_logic_vector(SIZE-1 downto 0)
+	);
+	end component;
+	
 	component mux_3 is
 	generic (
 		W_SIZE 	: natural := 32
@@ -149,6 +169,7 @@ package mips_pkg is
 		wren		: IN STD_LOGIC ;
 		q			: OUT STD_LOGIC_VECTOR (WIDTH-1 DOWNTO 0));
 	end component;
+	
 
 	component ulamips is
 	port (
@@ -181,9 +202,10 @@ package mips_pkg is
 	
 	component alu_ctr is
 	port (
-		op_alu		: in std_logic_vector(1 downto 0);
+		op_alu		: in std_logic_vector(2 downto 0);
 		funct			: in std_logic_vector(5 downto 0);
-		alu_ctr	   : out std_logic_vector(3 downto 0)
+		alu_ctr	   : out std_logic_vector(3 downto 0);
+		shift			: out  std_logic
 	);
 	end component;
 	
@@ -199,13 +221,23 @@ package mips_pkg is
 		is_beq	: OUT std_logic;
 		is_bne	: OUT std_logic;
 		s_datareg: OUT std_logic;
-		op_alu	: OUT std_logic_vector (1 DOWNTO 0);
+		op_alu	: OUT std_logic_vector (2 DOWNTO 0);
 		s_mem_add: OUT std_logic;
 		s_PCin	: OUT std_logic_vector (1 DOWNTO 0);
 		s_aluAin : OUT std_logic;
 		s_aluBin : OUT std_logic_vector (1 DOWNTO 0); 
 		wr_breg	: OUT std_logic;
-		s_reg_add: OUT std_logic
+		s_reg_add: OUT std_logic;
+		s_extensor_imm: OUT std_logic; -- novo sinal para extender com ou sem sinal
+		
+		 -- sinais de load
+--		mux_8_load: OUT std_logic_vector(1 downto 0);
+--		mux_16_load	: OUT std_logic; 
+		resize32_8: OUT std_logic;
+		resize32_16: OUT std_logic;
+		mux_32_load: OUT std_logic_vector(1 downto 0);
+		-- Sinais de store
+		store_sel_ctr: OUT std_logic_vector(1 downto 0)
 	);
 	END component;
 	
@@ -235,7 +267,37 @@ component extsgn is
 		);
 end component;
 
+component extusgn is
+	generic (
+		IN_SIZE : natural := 16;
+		OUT_SIZE : natural := 32	
+		);
+	port (
+		input : in std_logic_vector(IN_SIZE-1 downto 0);
+		output: out std_logic_vector(OUT_SIZE-1 downto 0)
+		);
+end component;
+
+component extshamt is
+	generic (
+		IN_SIZE : natural := 5;
+		OUT_SIZE : natural := 32	
+		);
+	port (
+		input : in std_logic_vector(IN_SIZE-1 downto 0);
+		output: out std_logic_vector(OUT_SIZE-1 downto 0)
+		);
+end component;
+
 component sig_ext is
+	port (
+		imm16	: in std_logic_vector(WORD_SIZE/2 - 1 downto 0);
+		ext32 : out std_logic_vector(WORD_SIZE-1 downto 0)
+		);
+end component;
+
+
+component usig_ext is
 	port (
 		imm16	: in std_logic_vector(WORD_SIZE/2 - 1 downto 0);
 		ext32 : out std_logic_vector(WORD_SIZE-1 downto 0)
@@ -254,6 +316,18 @@ component mips_mem is
 		q			: OUT STD_LOGIC_VECTOR (WIDTH-1 DOWNTO 0));
 end component;
 
+component mips_ram is
+	PORT
+	(
+		address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		byteena		: IN STD_LOGIC_VECTOR (3 DOWNTO 0) :=  (OTHERS => '1');
+		clock		: IN STD_LOGIC  := '1';
+		data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+		wren		: IN STD_LOGIC ;
+		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	);
+end component;
+
 component data_mem is
 	port
 	(
@@ -262,6 +336,75 @@ component data_mem is
 		data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 		wren		: IN STD_LOGIC ;
 		q			: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	);
+end component;
+
+component decoder2_4 is --seletor de byte para sb
+	port 
+	(			
+			A  : in  STD_LOGIC_VECTOR (1 downto 0);  -- 2-bit input
+			B  : in  STD_LOGIC_VECTOR (1 downto 0);  -- 2-bit input
+			X  : out STD_LOGIC_VECTOR (3 downto 0);  -- 4-bit output
+			EN : in  STD_LOGIC  -- enable input
+	);
+end component;
+
+component byte_select is --seletor de byte para sb
+	port 
+	(
+		w_in	   : in std_logic_vector(7 downto 0); --Byte de entrada
+		sel		: in std_logic_vector(1 downto 0); --seleciona a posicao do offset
+		w_out	: out std_logic_vector(WORD_SIZE-1 downto 0) -- Palavra de saida com os zeros
+		
+	);
+end component;
+
+component half_word_select is -- seletor da meia palavra para sh
+	port 
+	(
+		w_in	   : in std_logic_vector(15 downto 0); -- HalfPalavra de entrada
+		sel		: in std_logic; --seleciona a posicao do offset
+		w_out	: out std_logic_vector(WORD_SIZE-1 downto 0) -- Palavra de saida com os zeros
+		
+	);
+end component;
+
+component mux_32 is	-- mux que seleciona se a palavra Ã© sw, sh ou sb
+		port (
+	 	in0, in1, in2	: in std_logic_vector(WORD_SIZE-1 downto 0);
+		sel						: in std_logic_vector(1 downto 0);
+		m_out						: out std_logic_vector(WORD_SIZE-1 downto 0));
+end component;
+
+component mux_8_load is
+	port (
+	 	in0, in1, in2, in3	: in std_logic_vector(7 downto 0);
+		sel						: in std_logic_vector(1 downto 0);
+		m_out						: out std_logic_vector(7 downto 0));
+end component;
+
+component mux_16_load is
+	port (
+	 	in0, in1	: in std_logic_vector(15 downto 0);
+		sel						: in std_logic;
+		m_out						: out std_logic_vector(15 downto 0));
+end component;
+
+component resize32_8 is
+	port 
+	(
+		rs_in	   : in std_logic_vector(7 downto 0);
+		sel		: in std_logic;
+		rs_out	: out std_logic_vector(WORD_SIZE-1 downto 0)
+	);
+end component;
+
+component resize32_16 is
+	port 
+	(
+		rs_in	   : in std_logic_vector(15 downto 0);
+		sel		: in std_logic;
+		rs_out	: out std_logic_vector(WORD_SIZE-1 downto 0)
 	);
 end component;
 	

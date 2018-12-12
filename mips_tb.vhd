@@ -14,13 +14,32 @@ signal clk 		: std_logic := '0';
 signal clk_rom : std_logic := '0';
 signal rst 		: std_logic := '1';
 signal data		: std_logic_vector(31 downto 0);
-signal dbg		: std_logic_vector(1 downto 0) := "00";
+signal debug		: std_logic_vector(1 downto 0) := "11";
+
+COMPONENT Multiciclo
+port (
+	clk		: in std_logic;
+	clk_rom	: in std_logic;
+	rst	   : in std_logic;
+	debug		: in std_logic_vector(1 downto 0);
+	data  	: out std_logic_vector(31 downto 0)
+);
+END COMPONENT;
 
 begin
 
+i1 : Multiciclo
+PORT MAP (
+clk => clk,
+clk_rom => clk_rom,
+rst => rst,
+debug => debug,
+data => data
+);
+
 rst 	<= '0' after 200 ps;
 
-dbg	<= "01" after 1000 ps, "10" after 1800 ps;
+--debug	<= "01" after 1000 ps, "10" after 1800 ps;
 
 genclk: 	process (clk) begin
 				clk <= not clk after 100 ps;
@@ -30,13 +49,13 @@ genrclk:	process (clk_rom) begin
 				clk_rom <= not clk_rom after 10 ps;
 			end process;
 		  
-uut: 	mips_multi
-		port map (	
-			clk 		=> clk,
-			clk_rom 	=> clk_rom,
-			rst 		=> rst,
-			debug		=> dbg,
-			data 		=> data
-		);
+--uut: 	mips_multi
+--		port map (	
+--			clk 		=> clk,
+--			clk_rom 	=> clk_rom,
+--			rst 		=> rst,
+--			debug		=> debug,
+--			data 		=> data
+--		);
 end architecture;
 				
