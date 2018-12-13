@@ -1,5 +1,5 @@
 Fitter report for Multiciclo
-Wed Dec 12 18:08:42 2018
+Thu Dec 13 18:17:10 2018
 Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -63,15 +63,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +------------------------------------+------------------------------------------+
-; Fitter Status                      ; Successful - Wed Dec 12 18:08:42 2018    ;
+; Fitter Status                      ; Successful - Thu Dec 13 18:17:10 2018    ;
 ; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; Multiciclo                               ;
 ; Top-level Entity Name              ; Multiciclo                               ;
 ; Family                             ; Cyclone II                               ;
 ; Device                             ; EP2C70F896C6                             ;
 ; Timing Models                      ; Final                                    ;
-; Total logic elements               ; 1,318 / 68,416 ( 2 % )                   ;
-;     Total combinational functions  ; 1,279 / 68,416 ( 2 % )                   ;
+; Total logic elements               ; 1,309 / 68,416 ( 2 % )                   ;
+;     Total combinational functions  ; 1,278 / 68,416 ( 2 % )                   ;
 ;     Dedicated logic registers      ; 241 / 68,416 ( < 1 % )                   ;
 ; Total registers                    ; 241                                      ;
 ; Total pins                         ; 37 / 622 ( 6 % )                         ;
@@ -140,12 +140,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 2.71        ;
+; Average used               ; 2.26        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2-4 processors         ;  25.0%      ;
+;     2-4 processors         ;  15.4%      ;
 ;     5-8 processors         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -156,8 +156,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 1658 ( 0.00 % )    ;
-;     -- Achieved     ; 0 / 1658 ( 0.00 % )    ;
+;     -- Requested    ; 0 / 1657 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 1657 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -180,7 +180,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 1655    ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 1654    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -196,26 +196,26 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Total logic elements                        ; 1,318 / 68,416 ( 2 % )       ;
-;     -- Combinational with no register       ; 1077                         ;
-;     -- Register only                        ; 39                           ;
-;     -- Combinational with a register        ; 202                          ;
+; Total logic elements                        ; 1,309 / 68,416 ( 2 % )       ;
+;     -- Combinational with no register       ; 1068                         ;
+;     -- Register only                        ; 31                           ;
+;     -- Combinational with a register        ; 210                          ;
 ;                                             ;                              ;
 ; Logic element usage by number of LUT inputs ;                              ;
-;     -- 4 input functions                    ; 834                          ;
-;     -- 3 input functions                    ; 396                          ;
+;     -- 4 input functions                    ; 849                          ;
+;     -- 3 input functions                    ; 380                          ;
 ;     -- <=2 input functions                  ; 49                           ;
-;     -- Register only                        ; 39                           ;
+;     -- Register only                        ; 31                           ;
 ;                                             ;                              ;
 ; Logic elements by mode                      ;                              ;
-;     -- normal mode                          ; 1217                         ;
+;     -- normal mode                          ; 1216                         ;
 ;     -- arithmetic mode                      ; 62                           ;
 ;                                             ;                              ;
 ; Total registers*                            ; 241 / 70,234 ( < 1 % )       ;
 ;     -- Dedicated logic registers            ; 241 / 68,416 ( < 1 % )       ;
 ;     -- I/O registers                        ; 0 / 1,818 ( 0 % )            ;
 ;                                             ;                              ;
-; Total LABs:  partially or completely used   ; 93 / 4,276 ( 2 % )           ;
+; Total LABs:  partially or completely used   ; 92 / 4,276 ( 2 % )           ;
 ; Virtual pins                                ; 0                            ;
 ; I/O pins                                    ; 37 / 622 ( 6 % )             ;
 ;     -- Clock pins                           ; 3 / 8 ( 38 % )               ;
@@ -231,11 +231,11 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )                ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )                ;
 ; Average interconnect usage (total/H/V)      ; 1% / 1% / 1%                 ;
-; Peak interconnect usage (total/H/V)         ; 30% / 28% / 32%              ;
+; Peak interconnect usage (total/H/V)         ; 17% / 15% / 20%              ;
 ; Maximum fan-out                             ; 243                          ;
 ; Highest non-global fan-out                  ; 104                          ;
-; Total fan-out                               ; 5481                         ;
-; Average fan-out                             ; 3.43                         ;
+; Total fan-out                               ; 5490                         ;
+; Average fan-out                             ; 3.44                         ;
 +---------------------------------------------+------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -248,25 +248,25 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 1318 / 68416 ( 2 % )  ; 0 / 68416 ( 0 % )              ;
-;     -- Combinational with no register       ; 1077                  ; 0                              ;
-;     -- Register only                        ; 39                    ; 0                              ;
-;     -- Combinational with a register        ; 202                   ; 0                              ;
+; Total logic elements                        ; 1309 / 68416 ( 2 % )  ; 0 / 68416 ( 0 % )              ;
+;     -- Combinational with no register       ; 1068                  ; 0                              ;
+;     -- Register only                        ; 31                    ; 0                              ;
+;     -- Combinational with a register        ; 210                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 834                   ; 0                              ;
-;     -- 3 input functions                    ; 396                   ; 0                              ;
+;     -- 4 input functions                    ; 849                   ; 0                              ;
+;     -- 3 input functions                    ; 380                   ; 0                              ;
 ;     -- <=2 input functions                  ; 49                    ; 0                              ;
-;     -- Register only                        ; 39                    ; 0                              ;
+;     -- Register only                        ; 31                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 1217                  ; 0                              ;
+;     -- normal mode                          ; 1216                  ; 0                              ;
 ;     -- arithmetic mode                      ; 62                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 241                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 241 / 68416 ( < 1 % ) ; 0 / 68416 ( 0 % )              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 93 / 4276 ( 2 % )     ; 0 / 4276 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 92 / 4276 ( 2 % )     ; 0 / 4276 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 37                    ; 0                              ;
@@ -283,8 +283,8 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 5495                  ; 0                              ;
-;     -- Registered Connections               ; 1068                  ; 0                              ;
+;     -- Total Connections                    ; 5504                  ; 0                              ;
+;     -- Registered Connections               ; 1067                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -329,38 +329,38 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 +----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; data[0]  ; E14   ; 3        ; 40           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[10] ; A11   ; 3        ; 29           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[11] ; D12   ; 3        ; 31           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[12] ; G13   ; 3        ; 31           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[13] ; J13   ; 3        ; 33           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[14] ; C15   ; 3        ; 44           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[15] ; A12   ; 3        ; 35           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[16] ; E12   ; 3        ; 26           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[17] ; C13   ; 3        ; 40           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[18] ; H14   ; 3        ; 38           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[19] ; D15   ; 3        ; 42           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[1]  ; D14   ; 3        ; 40           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[20] ; C12   ; 3        ; 31           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[21] ; D13   ; 3        ; 29           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[22] ; M3    ; 2        ; 0            ; 33           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[23] ; F13   ; 3        ; 33           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[24] ; AK12  ; 8        ; 38           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[25] ; C14   ; 3        ; 38           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[26] ; B13   ; 3        ; 38           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[27] ; H13   ; 3        ; 29           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[28] ; C16   ; 4        ; 49           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[29] ; B14   ; 3        ; 42           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[2]  ; B11   ; 3        ; 29           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[30] ; E15   ; 3        ; 44           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[31] ; A14   ; 3        ; 42           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[3]  ; B15   ; 3        ; 44           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[4]  ; AG13  ; 8        ; 40           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[5]  ; AD14  ; 8        ; 38           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[6]  ; G14   ; 3        ; 35           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[7]  ; E13   ; 3        ; 33           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[8]  ; B12   ; 3        ; 35           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; data[9]  ; AJ12  ; 8        ; 38           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[0]  ; AC14  ; 8        ; 40           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[10] ; A14   ; 3        ; 42           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[11] ; F13   ; 3        ; 33           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[12] ; E14   ; 3        ; 40           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[13] ; G14   ; 3        ; 35           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[14] ; U5    ; 1        ; 0            ; 23           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[15] ; T6    ; 1        ; 0            ; 24           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[16] ; J13   ; 3        ; 33           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[17] ; AK14  ; 8        ; 44           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[18] ; AD14  ; 8        ; 38           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[19] ; AK12  ; 8        ; 38           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[1]  ; AD13  ; 8        ; 33           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[20] ; B13   ; 3        ; 38           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[21] ; AC13  ; 8        ; 33           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[22] ; D14   ; 3        ; 40           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[23] ; AG14  ; 8        ; 40           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[24] ; B12   ; 3        ; 35           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[25] ; AG13  ; 8        ; 40           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[26] ; A12   ; 3        ; 35           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[27] ; E13   ; 3        ; 33           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[28] ; AJ12  ; 8        ; 38           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[29] ; AG12  ; 8        ; 35           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[2]  ; D12   ; 3        ; 31           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[30] ; H14   ; 3        ; 38           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[31] ; AH12  ; 8        ; 35           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[3]  ; G13   ; 3        ; 31           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[4]  ; AE15  ; 8        ; 42           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[5]  ; U1    ; 1        ; 0            ; 23           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[6]  ; U2    ; 1        ; 0            ; 23           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[7]  ; AB13  ; 8        ; 35           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[8]  ; AH13  ; 8        ; 44           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; data[9]  ; AF14  ; 8        ; 42           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -369,14 +369,14 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 2 / 85 ( 2 % )   ; 3.3V          ; --           ;
-; 2        ; 4 / 79 ( 5 % )   ; 3.3V          ; --           ;
-; 3        ; 28 / 72 ( 39 % ) ; 3.3V          ; --           ;
-; 4        ; 1 / 74 ( 1 % )   ; 3.3V          ; --           ;
+; 1        ; 6 / 85 ( 7 % )   ; 3.3V          ; --           ;
+; 2        ; 3 / 79 ( 4 % )   ; 3.3V          ; --           ;
+; 3        ; 15 / 72 ( 21 % ) ; 3.3V          ; --           ;
+; 4        ; 0 / 74 ( 0 % )   ; 3.3V          ; --           ;
 ; 5        ; 0 / 85 ( 0 % )   ; 3.3V          ; --           ;
 ; 6        ; 1 / 81 ( 1 % )   ; 3.3V          ; --           ;
 ; 7        ; 0 / 74 ( 0 % )   ; 3.3V          ; --           ;
-; 8        ; 4 / 72 ( 6 % )   ; 3.3V          ; --           ;
+; 8        ; 15 / 72 ( 21 % ) ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -394,10 +394,10 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; A8       ; 606        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A9       ; 594        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A10      ; 592        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A11      ; 586        ; 3        ; data[10]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A12      ; 578        ; 3        ; data[15]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A11      ; 586        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A12      ; 578        ; 3        ; data[26]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; A14      ; 569        ; 3        ; data[31]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A14      ; 569        ; 3        ; data[10]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A15      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A16      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A17      ; 549        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -455,7 +455,7 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; AB10     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB11     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB12     ; 218        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AB13     ; 224        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AB13     ; 224        ; 8        ; data[7]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AB14     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB15     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -485,8 +485,8 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; AC10     ;            ;          ; GNDA_PLL1                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC11     ; 196        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC12     ; 201        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC13     ; 223        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC14     ; 231        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC13     ; 223        ; 8        ; data[21]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC14     ; 231        ; 8        ; data[0]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AC15     ; 245        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AC16     ; 250        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC17     ; 259        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -515,8 +515,8 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; AD10     ; 197        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD11     ; 202        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD12     ; 210        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD13     ; 222        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD14     ; 229        ; 8        ; data[5]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD13     ; 222        ; 8        ; data[1]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD14     ; 229        ; 8        ; data[18]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD15     ; 244        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AD16     ; 249        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD17     ; 258        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -547,7 +547,7 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; AE12     ; 209        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE13     ; 221        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE14     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AE15     ; 235        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE15     ; 235        ; 8        ; data[4]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE16     ; 248        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE17     ; 255        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE18     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -576,7 +576,7 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; AF11     ; 203        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF12     ; 217        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF13     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AF14     ; 233        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF14     ; 233        ; 8        ; data[9]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF15     ; 234        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF16     ; 252        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF17     ; 264        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -604,9 +604,9 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; AG9      ; 208        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AG10     ; 212        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AG11     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AG12     ; 226        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AG13     ; 230        ; 8        ; data[4]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AG14     ; 232        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AG12     ; 226        ; 8        ; data[29]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG13     ; 230        ; 8        ; data[25]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG14     ; 232        ; 8        ; data[23]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AG15     ; 242        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AG16     ; 251        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AG17     ; 254        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -634,8 +634,8 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; AH9      ; 207        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH10     ; 211        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH11     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AH12     ; 225        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AH13     ; 237        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AH12     ; 225        ; 8        ; data[31]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AH13     ; 237        ; 8        ; data[8]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AH14     ; 243        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AH15     ; 241        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH16     ; 247        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -664,7 +664,7 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; AJ9      ; 214        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ10     ; 216        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ11     ; 220        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AJ12     ; 228        ; 8        ; data[9]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AJ12     ; 228        ; 8        ; data[28]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AJ13     ; 236        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ14     ; 239        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ15     ; 240        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -693,9 +693,9 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; AK9      ; 213        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK10     ; 215        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK11     ; 219        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AK12     ; 227        ; 8        ; data[24]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AK12     ; 227        ; 8        ; data[19]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AK13     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AK14     ; 238        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AK14     ; 238        ; 8        ; data[17]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AK15     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AK16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AK17     ; 256        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -721,11 +721,11 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; B8       ; 605        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B9       ; 593        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B10      ; 591        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B11      ; 585        ; 3        ; data[2]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B12      ; 577        ; 3        ; data[8]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B13      ; 573        ; 3        ; data[26]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B14      ; 568        ; 3        ; data[29]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B15      ; 565        ; 3        ; data[3]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B11      ; 585        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B12      ; 577        ; 3        ; data[24]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B13      ; 573        ; 3        ; data[20]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B14      ; 568        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B15      ; 565        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B16      ; 559        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B17      ; 548        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B18      ; 547        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -752,11 +752,11 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; C9       ; 603        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C10      ; 600        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; C12      ; 584        ; 3        ; data[20]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C13      ; 572        ; 3        ; data[17]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C14      ; 575        ; 3        ; data[25]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C15      ; 564        ; 3        ; data[14]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C16      ; 558        ; 4        ; data[28]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C12      ; 584        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C13      ; 572        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C14      ; 575        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C15      ; 564        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C16      ; 558        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C17      ; 554        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C18      ; 546        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C19      ; 538        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -782,10 +782,10 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; D9       ; 604        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D10      ; 599        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D11      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D12      ; 583        ; 3        ; data[11]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D13      ; 588        ; 3        ; data[21]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D14      ; 571        ; 3        ; data[1]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D15      ; 567        ; 3        ; data[19]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D12      ; 583        ; 3        ; data[2]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D13      ; 588        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D14      ; 571        ; 3        ; data[22]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D15      ; 567        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 561        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D17      ; 553        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D18      ; 541        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -812,10 +812,10 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; E9       ; 609        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E10      ; 607        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E11      ; 596        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; E12      ; 589        ; 3        ; data[16]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; E13      ; 579        ; 3        ; data[7]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; E14      ; 570        ; 3        ; data[0]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; E15      ; 566        ; 3        ; data[30]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E12      ; 589        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; E13      ; 579        ; 3        ; data[27]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E14      ; 570        ; 3        ; data[12]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E15      ; 566        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E16      ; 560        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; E17      ; 550        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E18      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -843,7 +843,7 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; F10      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; F11      ; 595        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F12      ; 590        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F13      ; 580        ; 3        ; data[23]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F13      ; 580        ; 3        ; data[11]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F15      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; F16      ; 556        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -873,8 +873,8 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; G10      ; 623        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G11      ; 610        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G12      ; 597        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G13      ; 582        ; 3        ; data[12]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G14      ; 576        ; 3        ; data[6]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G13      ; 582        ; 3        ; data[3]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G14      ; 576        ; 3        ; data[13]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G15      ; 562        ; 3        ; debug[1]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G16      ; 555        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G17      ; 551        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -903,8 +903,8 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; H10      ; 622        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H11      ; 602        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H12      ; 598        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; H13      ; 587        ; 3        ; data[27]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H14      ; 574        ; 3        ; data[18]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H13      ; 587        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; H14      ; 574        ; 3        ; data[30]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H15      ; 563        ; 3        ; debug[0]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H16      ; 557        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H17      ; 552        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -933,7 +933,7 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; J10      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J12      ; 601        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; J13      ; 581        ; 3        ; data[13]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J13      ; 581        ; 3        ; data[16]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J15      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J16      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -1013,7 +1013,7 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; L30      ; 432        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M1       ; 64         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M2       ; 65         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; M3       ; 66         ; 2        ; data[22]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M3       ; 66         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M4       ; 67         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M5       ; 53         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M6       ; 49         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1136,7 +1136,7 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; T3       ; 88         ; 1        ; clk_rom                                  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; T4       ; 91         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T5       ; 92         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; T6       ; 89         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T6       ; 89         ; 1        ; data[15]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; T7       ; 90         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T8       ; 97         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T9       ; 96         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1161,11 +1161,11 @@ The pin-out file can be found in C:/Users/rodri/Desktop/mips-multiciclo/output_f
 ; T28      ; 397        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T29      ; 398        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T30      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; U1       ; 93         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U2       ; 94         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U1       ; 93         ; 1        ; data[5]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U2       ; 94         ; 1        ; data[6]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; U3       ; 102        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U4       ; 103        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U5       ; 95         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U5       ; 95         ; 1        ; data[14]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; U6       ; 100        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U7       ; 101        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U8       ; 99         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1327,35 +1327,35 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                     ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------+--------------+
-; |Multiciclo                               ; 1318 (67)   ; 241 (0)                   ; 0 (0)         ; 10240       ; 4    ; 0            ; 0       ; 0         ; 37   ; 0            ; 1077 (66)    ; 39 (0)            ; 202 (1)          ; |Multiciclo                                                                             ;              ;
-;    |alu_ctr:actr|                         ; 32 (32)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 7 (7)            ; |Multiciclo|alu_ctr:actr                                                                ;              ;
-;    |breg:bcoreg|                          ; 114 (114)   ; 39 (39)                   ; 0 (0)         ; 2048        ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 30 (30)           ; 57 (57)          ; |Multiciclo|breg:bcoreg                                                                 ;              ;
+; |Multiciclo                               ; 1309 (65)   ; 241 (0)                   ; 0 (0)         ; 10240       ; 4    ; 0            ; 0       ; 0         ; 37   ; 0            ; 1068 (64)    ; 31 (0)            ; 210 (3)          ; |Multiciclo                                                                             ;              ;
+;    |alu_ctr:actr|                         ; 32 (32)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 6 (6)            ; |Multiciclo|alu_ctr:actr                                                                ;              ;
+;    |breg:bcoreg|                          ; 115 (115)   ; 39 (39)                   ; 0 (0)         ; 2048        ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 18 (18)           ; 71 (71)          ; |Multiciclo|breg:bcoreg                                                                 ;              ;
 ;       |altsyncram:breg32_rtl_0|           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1024        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_0                                         ;              ;
 ;          |altsyncram_dbi1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1024        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_0|altsyncram_dbi1:auto_generated          ;              ;
 ;       |altsyncram:breg32_rtl_1|           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1024        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_1                                         ;              ;
 ;          |altsyncram_dbi1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1024        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Multiciclo|breg:bcoreg|altsyncram:breg32_rtl_1|altsyncram_dbi1:auto_generated          ;              ;
 ;    |decoder2_4:decoder|                   ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |Multiciclo|decoder2_4:decoder                                                          ;              ;
-;    |mips_control:ctr_mips|                ; 42 (42)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 1 (1)             ; 15 (15)          ; |Multiciclo|mips_control:ctr_mips                                                       ;              ;
+;    |mips_control:ctr_mips|                ; 42 (42)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 1 (1)             ; 14 (14)          ; |Multiciclo|mips_control:ctr_mips                                                       ;              ;
 ;    |mips_ram:mem|                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Multiciclo|mips_ram:mem                                                                ;              ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Multiciclo|mips_ram:mem|altsyncram:altsyncram_component                                ;              ;
 ;          |altsyncram_19f1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Multiciclo|mips_ram:mem|altsyncram:altsyncram_component|altsyncram_19f1:auto_generated ;              ;
 ;    |mux_16_load:mux16_l|                  ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Multiciclo|mux_16_load:mux16_l                                                         ;              ;
-;    |mux_2:breg_data_mux|                  ; 32 (32)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 4 (4)            ; |Multiciclo|mux_2:breg_data_mux                                                         ;              ;
+;    |mux_2:breg_data_mux|                  ; 32 (32)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 11 (11)          ; |Multiciclo|mux_2:breg_data_mux                                                         ;              ;
 ;    |mux_2:mux_mem|                        ; 10 (10)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; |Multiciclo|mux_2:mux_mem                                                               ;              ;
-;    |mux_2:mux_reg_add|                    ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (3)            ; |Multiciclo|mux_2:mux_reg_add                                                           ;              ;
-;    |mux_2:mux_shift|                      ; 67 (67)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 63 (63)      ; 0 (0)             ; 4 (4)            ; |Multiciclo|mux_2:mux_shift                                                             ;              ;
-;    |mux_32:mux32_l|                       ; 32 (32)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 23 (23)          ; |Multiciclo|mux_32:mux32_l                                                              ;              ;
-;    |mux_32:mux32_s|                       ; 47 (47)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 47 (47)      ; 0 (0)             ; 0 (0)            ; |Multiciclo|mux_32:mux32_s                                                              ;              ;
-;    |mux_4:mux_ulaB|                       ; 52 (52)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 36 (36)      ; 0 (0)             ; 16 (16)          ; |Multiciclo|mux_4:mux_ulaB                                                              ;              ;
+;    |mux_2:mux_reg_add|                    ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; |Multiciclo|mux_2:mux_reg_add                                                           ;              ;
+;    |mux_2:mux_shift|                      ; 67 (67)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 61 (61)      ; 0 (0)             ; 6 (6)            ; |Multiciclo|mux_2:mux_shift                                                             ;              ;
+;    |mux_32:mux32_l|                       ; 31 (31)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 23 (23)          ; |Multiciclo|mux_32:mux32_l                                                              ;              ;
+;    |mux_32:mux32_s|                       ; 47 (47)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 46 (46)      ; 0 (0)             ; 1 (1)            ; |Multiciclo|mux_32:mux32_s                                                              ;              ;
+;    |mux_4:mux_ulaB|                       ; 52 (52)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 40 (40)      ; 0 (0)             ; 12 (12)          ; |Multiciclo|mux_4:mux_ulaB                                                              ;              ;
 ;    |mux_8_load:mux8_l|                    ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Multiciclo|mux_8_load:mux8_l                                                           ;              ;
-;    |reg:ir|                               ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 29 (29)          ; |Multiciclo|reg:ir                                                                      ;              ;
+;    |reg:ir|                               ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 25 (25)          ; |Multiciclo|reg:ir                                                                      ;              ;
 ;    |reg:pc|                               ; 34 (34)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 32 (32)          ; |Multiciclo|reg:pc                                                                      ;              ;
 ;    |regbuf:rdm|                           ; 37 (37)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 32 (32)          ; |Multiciclo|regbuf:rdm                                                                  ;              ;
-;    |regbuf:regULA|                        ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 30 (30)          ; |Multiciclo|regbuf:regULA                                                               ;              ;
+;    |regbuf:regULA|                        ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 29 (29)          ; |Multiciclo|regbuf:regULA                                                               ;              ;
 ;    |regbuf:rgA|                           ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 30 (30)          ; |Multiciclo|regbuf:rgA                                                                  ;              ;
-;    |regbuf:rgB|                           ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 31 (31)          ; |Multiciclo|regbuf:rgB                                                                  ;              ;
+;    |regbuf:rgB|                           ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 32 (32)          ; |Multiciclo|regbuf:rgB                                                                  ;              ;
 ;    |resize32_8:res32_8|                   ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Multiciclo|resize32_8:res32_8                                                          ;              ;
-;    |ulamips:alu|                          ; 762 (762)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 722 (722)    ; 0 (0)             ; 40 (40)          ; |Multiciclo|ulamips:alu                                                                 ;              ;
+;    |ulamips:alu|                          ; 762 (762)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 723 (723)    ; 0 (0)             ; 39 (39)          ; |Multiciclo|ulamips:alu                                                                 ;              ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1425,14 +1425,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clk                                      ; PIN_T2             ; 243     ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
 ; clk_rom                                  ; PIN_T3             ; 2       ; Clock        ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; mips_control:ctr_mips|mux_32_load[1]~5   ; LCCOMB_X35_Y31_N2  ; 19      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; mips_control:ctr_mips|pstate.fetch_st    ; LCFF_X43_Y32_N15   ; 42      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_control:ctr_mips|pstate.jump_ex_st  ; LCFF_X38_Y34_N21   ; 34      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; mips_control:ctr_mips|pstate.writemem_st ; LCFF_X40_Y32_N17   ; 14      ; Write enable ; no     ; --                   ; --               ; --                        ;
-; mips_control:ctr_mips|wr_breg            ; LCCOMB_X34_Y33_N22 ; 3       ; Write enable ; no     ; --                   ; --               ; --                        ;
-; reg:pc|sr_out[1]~26                      ; LCCOMB_X39_Y33_N18 ; 28      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; reg:pc|sr_out[31]~28                     ; LCCOMB_X39_Y33_N24 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; regbuf:rdm|sr_out[2]~10                  ; LCCOMB_X35_Y31_N6  ; 10      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; mips_control:ctr_mips|mux_32_load[1]~5   ; LCCOMB_X35_Y26_N18 ; 18      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; mips_control:ctr_mips|pstate.fetch_st    ; LCFF_X39_Y28_N13   ; 42      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_control:ctr_mips|pstate.jump_ex_st  ; LCFF_X39_Y26_N27   ; 34      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; mips_control:ctr_mips|pstate.writemem_st ; LCFF_X39_Y25_N9    ; 14      ; Write enable ; no     ; --                   ; --               ; --                        ;
+; mips_control:ctr_mips|wr_breg            ; LCCOMB_X35_Y25_N16 ; 3       ; Write enable ; no     ; --                   ; --               ; --                        ;
+; reg:pc|sr_out[1]~26                      ; LCCOMB_X43_Y23_N16 ; 28      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; reg:pc|sr_out[31]~28                     ; LCCOMB_X43_Y23_N10 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; regbuf:rdm|sr_out[2]~10                  ; LCCOMB_X35_Y26_N26 ; 10      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
 ; rst                                      ; PIN_R2             ; 35      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; rst                                      ; PIN_R2             ; 10      ; Async. clear ; yes    ; Global Clock         ; GCLK2            ; --                        ;
 +------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
@@ -1490,17 +1490,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips_control:ctr_mips|pstate.c_mem_add_st                                           ; 25      ;
 ; ulamips:alu|ShiftLeft0~30                                                           ; 23      ;
 ; mux_2:mux_shift|m_out[4]~3                                                          ; 22      ;
-; mips_control:ctr_mips|pstate.readmem_st                                             ; 20      ;
 ; regbuf:rgB|sr_out[31]                                                               ; 20      ;
-; mips_control:ctr_mips|mux_32_load[1]~5                                              ; 19      ;
+; reg:ir|sr_out[26]                                                                   ; 20      ;
 ; ulamips:alu|Mux28~29                                                                ; 19      ;
-; reg:ir|sr_out[26]                                                                   ; 19      ;
+; mips_control:ctr_mips|pstate.readmem_st                                             ; 19      ;
 ; reg:ir|sr_out[31]                                                                   ; 19      ;
+; mips_control:ctr_mips|mux_32_load[1]~5                                              ; 18      ;
 ; mips_control:ctr_mips|store_sel_ctr[0]~4                                            ; 18      ;
 ; ulamips:alu|Mux28~14                                                                ; 18      ;
+; resize32_8:res32_8|rs_out[8]~0                                                      ; 17      ;
 ; reg:ir|sr_out[9]                                                                    ; 17      ;
-; reg:ir|sr_out[28]                                                                   ; 17      ;
-; mux_32:mux32_l|m_out[31]~5                                                          ; 16      ;
+; mux_32:mux32_l|m_out[31]~4                                                          ; 16      ;
+; reg:ir|sr_out[28]                                                                   ; 16      ;
 ; mux_2:mux_mem|m_out[1]~1                                                            ; 15      ;
 ; mux_4:mux_ulaB|m_out[2]~1                                                           ; 15      ;
 ; reg:ir|sr_out[1]                                                                    ; 15      ;
@@ -1536,7 +1537,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regbuf:rgB|sr_out[19]                                                               ; 10      ;
 ; mux_4:mux_ulaB|m_out[0]~0                                                           ; 10      ;
 ; ulamips:alu|Mux28~31                                                                ; 9       ;
-; resize32_8:res32_8|rs_out[8]~1                                                      ; 9       ;
 ; mux_4:mux_ulaB|m_out[4]~44                                                          ; 9       ;
 ; mux_4:mux_ulaB|m_out[5]~42                                                          ; 9       ;
 ; mux_4:mux_ulaB|m_out[9]~34                                                          ; 9       ;
@@ -1559,10 +1559,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ulamips:alu|Mux28~30                                                                ; 8       ;
 ; ulamips:alu|ShiftRight1~93                                                          ; 8       ;
 ; ulamips:alu|ShiftLeft0~146                                                          ; 8       ;
+; resize32_8:res32_8|rs_out[8]~1                                                      ; 8       ;
 ; mux_32:mux32_s|m_out[24]~31                                                         ; 8       ;
 ; mux_32:mux32_s|m_out[16]~21                                                         ; 8       ;
 ; mux_32:mux32_s|m_out[6]~0                                                           ; 8       ;
-; mips_control:ctr_mips|Mux3~0                                                        ; 8       ;
 ; ulamips:alu|Mux14~10                                                                ; 8       ;
 ; ulamips:alu|Mux12~8                                                                 ; 8       ;
 ; ulamips:alu|ShiftRight1~39                                                          ; 8       ;
@@ -1576,6 +1576,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regbuf:rdm|sr_out[14]~13                                                            ; 7       ;
 ; mux_32:mux32_s|m_out[15]~13                                                         ; 7       ;
 ; mux_32:mux32_s|m_out[15]~12                                                         ; 7       ;
+; mips_control:ctr_mips|Mux3~0                                                        ; 7       ;
 ; ulamips:alu|Mux14~9                                                                 ; 7       ;
 ; ulamips:alu|Mux12~7                                                                 ; 7       ;
 ; ulamips:alu|Mux12~6                                                                 ; 7       ;
@@ -1730,13 +1731,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips_ram:mem|altsyncram:altsyncram_component|altsyncram_19f1:auto_generated|q_a[14] ; 4       ;
 ; mips_ram:mem|altsyncram:altsyncram_component|altsyncram_19f1:auto_generated|q_a[15] ; 4       ;
 ; mips_ram:mem|altsyncram:altsyncram_component|altsyncram_19f1:auto_generated|q_a[7]  ; 4       ;
+; mips_control:ctr_mips|mux_32_load[0]~4                                              ; 3       ;
 ; ulamips:alu|Mux2~17                                                                 ; 3       ;
 ; ulamips:alu|ShiftLeft0~152                                                          ; 3       ;
 ; ulamips:alu|ShiftRight1~97                                                          ; 3       ;
 ; ulamips:alu|ShiftRight1~95                                                          ; 3       ;
 ; ulamips:alu|ShiftLeft0~145                                                          ; 3       ;
+; mux_8_load:mux8_l|m_out[7]~0                                                        ; 3       ;
 ; mux_16_load:mux16_l|m_out[7]~0                                                      ; 3       ;
-; mips_control:ctr_mips|Mux2~3                                                        ; 3       ;
 ; mux_2:breg_data_mux|m_out[31]~31                                                    ; 3       ;
 ; mux_2:breg_data_mux|m_out[1]~30                                                     ; 3       ;
 ; mux_2:breg_data_mux|m_out[2]~29                                                     ; 3       ;
@@ -1862,7 +1864,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; reg:pc|sr_out[6]                                                                    ; 3       ;
 ; reg:pc|sr_out[4]                                                                    ; 3       ;
 ; mips_control:ctr_mips|pstate.fetch_st~_wirecell                                     ; 2       ;
-; mips_control:ctr_mips|mux_32_load[0]~4                                              ; 2       ;
 ; ulamips:alu|Mux0~14                                                                 ; 2       ;
 ; ulamips:alu|Mux2~19                                                                 ; 2       ;
 ; ulamips:alu|Mux2~18                                                                 ; 2       ;
@@ -1875,8 +1876,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ulamips:alu|ShiftRight0~96                                                          ; 2       ;
 ; ulamips:alu|ShiftRight0~95                                                          ; 2       ;
 ; ulamips:alu|ShiftRight0~94                                                          ; 2       ;
-; mux_8_load:mux8_l|m_out[7]~0                                                        ; 2       ;
 ; mux_16_load:mux16_l|m_out[7]~1                                                      ; 2       ;
+; mips_control:ctr_mips|Mux2~3                                                        ; 2       ;
 ; mux_2:mux_mem|m_out[9]~9                                                            ; 2       ;
 ; mux_2:mux_mem|m_out[8]~8                                                            ; 2       ;
 ; mux_2:mux_mem|m_out[7]~7                                                            ; 2       ;
@@ -2170,34 +2171,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ulamips:alu|Mux30~16                                                                ; 1       ;
 ; ulamips:alu|ShiftRight1~94                                                          ; 1       ;
 ; mux_2:mux_shift|m_out[1]~68                                                         ; 1       ;
-; mux_32:mux32_l|m_out[31]~31                                                         ; 1       ;
-; mux_32:mux32_l|m_out[1]~30                                                          ; 1       ;
+; mux_32:mux32_l|m_out[31]~30                                                         ; 1       ;
 ; mux_32:mux32_l|m_out[1]~29                                                          ; 1       ;
-; mux_32:mux32_l|m_out[2]~28                                                          ; 1       ;
+; mux_32:mux32_l|m_out[1]~28                                                          ; 1       ;
 ; mux_32:mux32_l|m_out[2]~27                                                          ; 1       ;
-; mux_32:mux32_l|m_out[3]~26                                                          ; 1       ;
+; mux_32:mux32_l|m_out[2]~26                                                          ; 1       ;
 ; mux_32:mux32_l|m_out[3]~25                                                          ; 1       ;
-; mux_32:mux32_l|m_out[16]~24                                                         ; 1       ;
-; mux_32:mux32_l|m_out[17]~23                                                         ; 1       ;
-; mux_32:mux32_l|m_out[18]~22                                                         ; 1       ;
-; mux_32:mux32_l|m_out[5]~21                                                          ; 1       ;
+; mux_32:mux32_l|m_out[3]~24                                                          ; 1       ;
+; mux_32:mux32_l|m_out[16]~23                                                         ; 1       ;
+; mux_32:mux32_l|m_out[17]~22                                                         ; 1       ;
+; mux_32:mux32_l|m_out[18]~21                                                         ; 1       ;
 ; mux_32:mux32_l|m_out[5]~20                                                          ; 1       ;
-; mux_32:mux32_l|m_out[6]~19                                                          ; 1       ;
+; mux_32:mux32_l|m_out[5]~19                                                          ; 1       ;
 ; mux_32:mux32_l|m_out[6]~18                                                          ; 1       ;
-; mux_32:mux32_l|m_out[19]~17                                                         ; 1       ;
-; mux_32:mux32_l|m_out[20]~16                                                         ; 1       ;
-; mux_32:mux32_l|m_out[21]~15                                                         ; 1       ;
-; mux_32:mux32_l|m_out[22]~14                                                         ; 1       ;
-; mux_32:mux32_l|m_out[23]~13                                                         ; 1       ;
-; mux_32:mux32_l|m_out[24]~12                                                         ; 1       ;
-; mux_32:mux32_l|m_out[25]~11                                                         ; 1       ;
-; mux_32:mux32_l|m_out[26]~10                                                         ; 1       ;
-; mux_32:mux32_l|m_out[27]~9                                                          ; 1       ;
-; mux_32:mux32_l|m_out[28]~8                                                          ; 1       ;
-; mux_32:mux32_l|m_out[29]~7                                                          ; 1       ;
-; mux_32:mux32_l|m_out[30]~6                                                          ; 1       ;
-; mux_32:mux32_l|m_out[31]~4                                                          ; 1       ;
-; resize32_8:res32_8|rs_out[8]~0                                                      ; 1       ;
+; mux_32:mux32_l|m_out[6]~17                                                          ; 1       ;
+; mux_32:mux32_l|m_out[19]~16                                                         ; 1       ;
+; mux_32:mux32_l|m_out[20]~15                                                         ; 1       ;
+; mux_32:mux32_l|m_out[21]~14                                                         ; 1       ;
+; mux_32:mux32_l|m_out[22]~13                                                         ; 1       ;
+; mux_32:mux32_l|m_out[23]~12                                                         ; 1       ;
+; mux_32:mux32_l|m_out[24]~11                                                         ; 1       ;
+; mux_32:mux32_l|m_out[25]~10                                                         ; 1       ;
+; mux_32:mux32_l|m_out[26]~9                                                          ; 1       ;
+; mux_32:mux32_l|m_out[27]~8                                                          ; 1       ;
+; mux_32:mux32_l|m_out[28]~7                                                          ; 1       ;
+; mux_32:mux32_l|m_out[29]~6                                                          ; 1       ;
+; mux_32:mux32_l|m_out[30]~5                                                          ; 1       ;
 ; mux_32:mux32_l|m_out[4]~3                                                           ; 1       ;
 ; mux_32:mux32_l|m_out[4]~2                                                           ; 1       ;
 ; mips_control:ctr_mips|Selector3~1                                                   ; 1       ;
@@ -2454,6 +2453,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; data~52                                                                             ; 1       ;
 ; ulamips:alu|Mux5~8                                                                  ; 1       ;
 ; ulamips:alu|Mux5~7                                                                  ; 1       ;
+; ulamips:alu|Mux5~6                                                                  ; 1       ;
 +-------------------------------------------------------------------------------------+---------+
 
 
@@ -2462,9 +2462,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------------------------------+--------------------------+
 ; Name                                                                                   ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF                                      ; Location                 ;
 +----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------------------------------+--------------------------+
-; breg:bcoreg|altsyncram:breg32_rtl_0|altsyncram_dbi1:auto_generated|ALTSYNCRAM          ; AUTO ; Simple Dual Port ; Single Clock ; 32           ; 32           ; 32           ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 1024 ; 32                          ; 32                          ; 32                          ; 32                          ; 1024                ; 1    ; db/Multiciclo.ram0_breg_9a0f9e64.hdl.mif ; M4K_X37_Y31              ;
-; breg:bcoreg|altsyncram:breg32_rtl_1|altsyncram_dbi1:auto_generated|ALTSYNCRAM          ; AUTO ; Simple Dual Port ; Single Clock ; 32           ; 32           ; 32           ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 1024 ; 32                          ; 32                          ; 32                          ; 32                          ; 1024                ; 1    ; db/Multiciclo.ram0_breg_9a0f9e64.hdl.mif ; M4K_X37_Y30              ;
-; mips_ram:mem|altsyncram:altsyncram_component|altsyncram_19f1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port      ; Single Clock ; 256          ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 8192 ; 256                         ; 32                          ; --                          ; --                          ; 8192                ; 2    ; mips_rom2.mif                            ; M4K_X37_Y32, M4K_X37_Y33 ;
+; breg:bcoreg|altsyncram:breg32_rtl_0|altsyncram_dbi1:auto_generated|ALTSYNCRAM          ; AUTO ; Simple Dual Port ; Single Clock ; 32           ; 32           ; 32           ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 1024 ; 32                          ; 32                          ; 32                          ; 32                          ; 1024                ; 1    ; db/Multiciclo.ram0_breg_9a0f9e64.hdl.mif ; M4K_X37_Y24              ;
+; breg:bcoreg|altsyncram:breg32_rtl_1|altsyncram_dbi1:auto_generated|ALTSYNCRAM          ; AUTO ; Simple Dual Port ; Single Clock ; 32           ; 32           ; 32           ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 1024 ; 32                          ; 32                          ; 32                          ; 32                          ; 1024                ; 1    ; db/Multiciclo.ram0_breg_9a0f9e64.hdl.mif ; M4K_X37_Y26              ;
+; mips_ram:mem|altsyncram:altsyncram_component|altsyncram_19f1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port      ; Single Clock ; 256          ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 8192 ; 256                         ; 32                          ; --                          ; --                          ; 8192                ; 2    ; mips_rom2.mif                            ; M4K_X37_Y25, M4K_X37_Y28 ;
 +----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------------------------------+--------------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -2475,86 +2475,86 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; Other Routing Resource Type ; Usage                   ;
 +-----------------------------+-------------------------+
 ; Block interconnects         ; 2,692 / 197,592 ( 1 % ) ;
-; C16 interconnects           ; 20 / 6,270 ( < 1 % )    ;
-; C4 interconnects            ; 1,794 / 123,120 ( 1 % ) ;
-; Direct links                ; 228 / 197,592 ( < 1 % ) ;
+; C16 interconnects           ; 35 / 6,270 ( < 1 % )    ;
+; C4 interconnects            ; 1,891 / 123,120 ( 2 % ) ;
+; Direct links                ; 214 / 197,592 ( < 1 % ) ;
 ; Global clocks               ; 3 / 16 ( 19 % )         ;
-; Local interconnects         ; 757 / 68,416 ( 1 % )    ;
-; R24 interconnects           ; 22 / 5,926 ( < 1 % )    ;
-; R4 interconnects            ; 1,996 / 167,484 ( 1 % ) ;
+; Local interconnects         ; 709 / 68,416 ( 1 % )    ;
+; R24 interconnects           ; 32 / 5,926 ( < 1 % )    ;
+; R4 interconnects            ; 2,023 / 167,484 ( 1 % ) ;
 +-----------------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 14.17) ; Number of LABs  (Total = 93) ;
+; Number of Logic Elements  (Average = 14.23) ; Number of LABs  (Total = 92) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 3                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 2                            ;
+; 1                                           ; 1                            ;
+; 2                                           ; 4                            ;
+; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 2                            ;
-; 9                                           ; 1                            ;
+; 6                                           ; 3                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 0                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 5                            ;
-; 12                                          ; 4                            ;
+; 11                                          ; 3                            ;
+; 12                                          ; 5                            ;
 ; 13                                          ; 3                            ;
-; 14                                          ; 5                            ;
-; 15                                          ; 7                            ;
-; 16                                          ; 60                           ;
+; 14                                          ; 4                            ;
+; 15                                          ; 10                           ;
+; 16                                          ; 59                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.31) ; Number of LABs  (Total = 93) ;
+; LAB-wide Signals  (Average = 1.28) ; Number of LABs  (Total = 92) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 6                            ;
-; 1 Clock                            ; 60                           ;
-; 1 Clock enable                     ; 23                           ;
+; 1 Async. clear                     ; 7                            ;
+; 1 Clock                            ; 50                           ;
+; 1 Clock enable                     ; 26                           ;
 ; 1 Sync. clear                      ; 18                           ;
-; 1 Sync. load                       ; 15                           ;
+; 1 Sync. load                       ; 17                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.69) ; Number of LABs  (Total = 93) ;
+; Number of Signals Sourced  (Average = 16.83) ; Number of LABs  (Total = 92) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 2                            ;
-; 2                                            ; 1                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 2                            ;
 ; 3                                            ; 1                            ;
-; 4                                            ; 0                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 0                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 3                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 2                            ;
+; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 4                            ;
-; 13                                           ; 3                            ;
-; 14                                           ; 5                            ;
-; 15                                           ; 4                            ;
-; 16                                           ; 23                           ;
-; 17                                           ; 13                           ;
-; 18                                           ; 5                            ;
-; 19                                           ; 5                            ;
-; 20                                           ; 2                            ;
-; 21                                           ; 5                            ;
-; 22                                           ; 4                            ;
-; 23                                           ; 3                            ;
-; 24                                           ; 2                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 7                            ;
+; 15                                           ; 7                            ;
+; 16                                           ; 29                           ;
+; 17                                           ; 6                            ;
+; 18                                           ; 4                            ;
+; 19                                           ; 4                            ;
+; 20                                           ; 4                            ;
+; 21                                           ; 3                            ;
+; 22                                           ; 8                            ;
+; 23                                           ; 2                            ;
+; 24                                           ; 1                            ;
 ; 25                                           ; 2                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 1                            ;
+; 26                                           ; 3                            ;
+; 27                                           ; 0                            ;
 ; 28                                           ; 1                            ;
 ; 29                                           ; 0                            ;
 ; 30                                           ; 0                            ;
@@ -2562,75 +2562,75 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +----------------------------------------------+------------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                        ;
-+-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.86) ; Number of LABs  (Total = 93) ;
-+-------------------------------------------------+------------------------------+
-; 0                                               ; 0                            ;
-; 1                                               ; 3                            ;
-; 2                                               ; 2                            ;
-; 3                                               ; 3                            ;
-; 4                                               ; 2                            ;
-; 5                                               ; 4                            ;
-; 6                                               ; 4                            ;
-; 7                                               ; 16                           ;
-; 8                                               ; 4                            ;
-; 9                                               ; 7                            ;
-; 10                                              ; 8                            ;
-; 11                                              ; 7                            ;
-; 12                                              ; 6                            ;
-; 13                                              ; 6                            ;
-; 14                                              ; 5                            ;
-; 15                                              ; 5                            ;
-; 16                                              ; 8                            ;
-; 17                                              ; 0                            ;
-; 18                                              ; 0                            ;
-; 19                                              ; 1                            ;
-; 20                                              ; 1                            ;
-; 21                                              ; 0                            ;
-; 22                                              ; 0                            ;
-; 23                                              ; 1                            ;
-+-------------------------------------------------+------------------------------+
++---------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                         ;
++--------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 10.11) ; Number of LABs  (Total = 92) ;
++--------------------------------------------------+------------------------------+
+; 0                                                ; 0                            ;
+; 1                                                ; 1                            ;
+; 2                                                ; 4                            ;
+; 3                                                ; 1                            ;
+; 4                                                ; 5                            ;
+; 5                                                ; 2                            ;
+; 6                                                ; 7                            ;
+; 7                                                ; 4                            ;
+; 8                                                ; 9                            ;
+; 9                                                ; 8                            ;
+; 10                                               ; 12                           ;
+; 11                                               ; 8                            ;
+; 12                                               ; 6                            ;
+; 13                                               ; 2                            ;
+; 14                                               ; 8                            ;
+; 15                                               ; 2                            ;
+; 16                                               ; 7                            ;
+; 17                                               ; 2                            ;
+; 18                                               ; 1                            ;
+; 19                                               ; 1                            ;
+; 20                                               ; 1                            ;
+; 21                                               ; 0                            ;
+; 22                                               ; 0                            ;
+; 23                                               ; 1                            ;
++--------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 25.27) ; Number of LABs  (Total = 93) ;
+; Number of Distinct Inputs  (Average = 25.37) ; Number of LABs  (Total = 92) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
+; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 2                            ;
+; 7                                            ; 1                            ;
 ; 8                                            ; 1                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 0                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 2                            ;
+; 16                                           ; 0                            ;
 ; 17                                           ; 1                            ;
 ; 18                                           ; 1                            ;
 ; 19                                           ; 1                            ;
-; 20                                           ; 3                            ;
-; 21                                           ; 6                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 6                            ;
-; 25                                           ; 7                            ;
-; 26                                           ; 9                            ;
-; 27                                           ; 3                            ;
-; 28                                           ; 8                            ;
-; 29                                           ; 7                            ;
+; 20                                           ; 2                            ;
+; 21                                           ; 3                            ;
+; 22                                           ; 3                            ;
+; 23                                           ; 4                            ;
+; 24                                           ; 4                            ;
+; 25                                           ; 4                            ;
+; 26                                           ; 7                            ;
+; 27                                           ; 7                            ;
+; 28                                           ; 3                            ;
+; 29                                           ; 12                           ;
 ; 30                                           ; 15                           ;
-; 31                                           ; 11                           ;
+; 31                                           ; 12                           ;
 ; 32                                           ; 2                            ;
 ; 33                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
@@ -2671,7 +2671,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Fitter
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Wed Dec 12 18:08:25 2018
+    Info: Processing started: Thu Dec 13 18:16:56 2018
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Multiciclo -c Multiciclo
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (119006): Selected device EP2C70F896C6 for design "Multiciclo"
@@ -2768,7 +2768,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 22% of the available device resources in the region that extends from location X36_Y26 to location X47_Y38
+    Info (170196): Router estimated peak interconnect usage is 13% of the available device resources in the region that extends from location X36_Y26 to location X47_Y38
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
@@ -2815,9 +2815,9 @@ Warning (169174): The Reserve All Unused Pins setting has not been specified, an
 Info (144001): Generated suppressed messages file C:/Users/rodri/Desktop/mips-multiciclo/output_files/Multiciclo.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 5018 megabytes
-    Info: Processing ended: Wed Dec 12 18:08:43 2018
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Processing ended: Thu Dec 13 18:17:11 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +----------------------------+
