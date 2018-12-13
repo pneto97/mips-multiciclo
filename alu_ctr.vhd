@@ -8,7 +8,7 @@ use work.mips_pkg.all;
 entity alu_ctr is
 	port 
 	(
-		op_alu		: in std_logic_vector(2 downto 0);
+		op_alu		: in std_logic_vector(2 downto 0); -- Adição de um bit a mais para tratamento de ANDI e ORI
 		funct			: in std_logic_vector(5 downto 0);
 		alu_ctr	   : out std_logic_vector(3 downto 0);
 		shift			: out std_logic -- Sinal para o shift (1 é shift, 0 não é)

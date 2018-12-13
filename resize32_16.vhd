@@ -17,6 +17,6 @@ end entity;
 
 architecture rtl of resize32_16 is
 begin
-	rs_out <= std_logic_vector(resize(unsigned(rs_in), rs_out'length)) when (sel = '1') else
+	rs_out <= std_logic_vector(resize(unsigned(rs_in), rs_out'length)) when (sel = '0') else
 				std_logic_vector(resize(signed(rs_in), rs_out'length));
 end rtl;
